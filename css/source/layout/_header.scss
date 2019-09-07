@@ -1,0 +1,158 @@
+//====================global header
+.layout-header {
+	//@include abs-center;
+	@include abs-center-fixed;
+	bottom: auto;
+	z-index: 200;
+	padding-top: 45px;
+
+	@include mobile{
+		padding-top: 75px;
+	}
+
+	&.active {
+		background-color: #211d1e;
+		padding-bottom: 20px;
+		padding-top: 25px;
+		-webkit-box-shadow: 0 0 10px #b1b1b1;
+		-moz-box-shadow: 0 0 10px #b1b1b1;
+		box-shadow: 0 0 10px #b1b1b1;
+
+		.nav-block{
+			top: 25px;
+		}
+
+		.si-phone{
+			top: 20px;
+		}
+
+		.show-menu{
+			top: 2px;
+		}
+	}
+
+	.si-phone {
+		padding-top: 0px;
+	}
+
+
+.logo {
+	width: 210px;
+	display: block;
+	font: 400 18px/20px 'Proba';
+	color: #ecbc4d;
+	text-transform: uppercase;
+
+	@include mobile{
+		float: right;
+
+	}
+}
+
+.si-phone {
+	position: absolute;
+	display: inline-block;
+	top: 47px;
+	right: 65px;
+	width: 160px;
+	z-index: 150;
+
+	@include tablet{
+		right: 25px;
+	}
+
+	@include mobile{
+		top: 75px;
+		right: 30px;
+
+	}
+
+	&:hover{
+		.circle-yellow{
+			@extend .buzz-out;
+		}
+	}
+
+	.circle-yellow{
+		position: absolute;
+		left: -52px;
+		top: -4px;
+		width: 32px;
+		height: 32px;
+		background-color: #ecbc4d;
+		-webkit-border-radius: 100%;
+		-moz-border-radius: 100%;
+		border-radius: 100%;
+
+		.phone-icon{
+			width: 13px;
+			height: 20px;
+			@include abs-center;
+		}
+	}
+
+	.phone-link {
+		display: block;
+		margin-bottom: 4px;
+		position: relative;
+		font: 400 22px/22px 'Proba';
+		color: #e1e1e1;
+
+		&:hover{
+			color: #ecbc4d;
+		}
+	}
+	
+	.consult{
+		display: block;
+		width: 100%;
+		border-bottom: 1px dotted #ecbc4d;
+		color: #ecbc4d;
+		font: 400 16px/16px 'Proba';
+
+		&:hover{
+			border-bottom: none;
+		}
+	}
+}
+
+.nav {
+	list-style-type: none;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+
+	@include mobile{
+		display: none;
+	}
+
+
+	li {
+		list-style-type: none;
+		display: inline-block;
+		margin-right: 30px;
+
+		@include tablet{
+			margin-right: 20px;
+		}
+	}
+
+	a {
+		color: #8c8c8c;
+		font: 400 16px/16px 'Proba';
+
+		&:hover{
+			color: #ffffff;
+			text-decoration: underline;
+		}
+	}
+}
+
+.nav-block{
+	position: absolute;
+	width: 30px;
+	height: 15px;
+	top: 45px;
+	left: 45px;
+}
+}

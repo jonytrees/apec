@@ -1,0 +1,94 @@
+//====================global footer
+.layout-footer {
+	padding: 65px 0 68px;
+
+
+	.logo {
+		width: 210px;
+		display: block;
+		font: 400 18px/20px 'Proba';
+		color: #ecbc4d;
+		text-transform: uppercase;
+	}
+
+	.si-phone {
+		float: right;
+		display: inline-block;
+		width: 160px;
+		position: relative;
+
+		&:hover{
+			.circle-yellow{
+				@extend .buzz-out;
+			}
+		}
+
+		.circle-yellow{
+			position: absolute;
+			left: -52px;
+			top: -4px;
+			width: 32px;
+			height: 32px;
+			background-color: #ecbc4d;
+			-webkit-border-radius: 100%;
+			-moz-border-radius: 100%;
+			border-radius: 100%;
+
+			.phone-icon{
+				width: 13px;
+				height: 20px;
+				@include abs-center;
+			}
+		}
+
+		.phone-link {
+			display: block;
+			margin-bottom: 4px;
+			position: relative;
+			font: 400 22px/22px 'Proba';
+			color: #e1e1e1;
+
+			&:hover{
+				color: #ecbc4d;
+			}
+		}
+
+		.consult{
+			display: block;
+			width: 100%;
+			border-bottom: 1px dotted #ecbc4d;
+			color: #ecbc4d;
+			font: 400 16px/16px 'Proba';
+
+			&:hover{
+				border-bottom: none;
+			}
+		}
+	}
+
+	.line{
+		width: 100%;
+		height: 1px;
+		background-color: #383334;
+		margin-top: 43px;
+		margin-bottom: 50px;
+	}
+
+	span{
+		color: #8c8c8c;
+		font: 400 16px/24px 'Proba';
+
+		@include mobile{
+			margin-top: 40px;
+		}
+
+		.yellow{
+			text-decoration: underline;
+			color: #ecbc4d;
+
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+}

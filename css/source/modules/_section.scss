@@ -1,0 +1,1651 @@
+//==================== section
+[class*="section-"] {
+	position: relative;
+	z-index: 1;
+}
+
+.circle-yellow{
+	position: relative;
+	left: -52px;
+	top: -10px;
+	width: 32px;
+	height: 32px;
+	background-color: #ecbc4d;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+}
+
+.button-yellow{
+	width: 255px;
+	height: 80px;
+	background-color: #ecbc4d;
+	text-align: center;
+	color: #211d1e;
+	font: 400 22px/80px 'Proba';
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	&:hover{
+		color: #ffffff;
+		border: 1px solid #ecbc4d;
+		background-color: #211d1e;
+		@extend .btn-ghost;
+	}
+}
+
+//==================== section x
+.section-x {
+	background: url('../images/') no-repeat 50% 50% transparent;
+	padding: 0px 0 0px;
+
+	h2 {
+		margin-bottom: 0px;
+	}
+}
+
+//==================== section heading
+.section-heading {
+	background: fixed url('../images/header-bg.png') no-repeat 50% 40% transparent;
+	padding: 220px 0 200px;
+	position: relative;
+	overflow: hidden;
+
+	@include mobile{
+		padding-top: 260px;
+		padding-bottom: 140px;
+	}
+
+	.abs-block{
+		width: 140px;
+		display: block;
+		position: absolute;
+		top: 25%;
+		right: 25%;
+		z-index: 150;
+
+		@include tablet{
+			right: 15%;
+		}
+
+		@include mobile{
+			display: none;
+		}
+
+		.title{
+			display: block;
+			color: #e1e1e1;
+			font: 400 150px/35px 'Proba';
+			text-transform: uppercase;
+			margin-bottom: 15px;
+			text-align: center;
+
+			span{
+				font: 400 30px/30px 'Proba';
+			}
+		}
+
+		.text{
+			display: block;
+			width: 100%;
+
+			.yellow-link{
+				display: block;
+				color: #ecbc4d !important;
+				background-color: transparent !important;
+				border-bottom: 1px dotted #ecbc4d;
+				position: relative;
+				width: 75%;
+				float: right;
+				font: 400 16px/16px 'Proba';
+				text-align: right;
+
+				&:hover{
+					border-bottom: none;
+					.circle{
+						@include general-transition;
+						transform: rotate(0deg);
+					}
+				}
+
+				&:not(hover){
+					.circle{
+						@include general-transition;
+					}
+				}
+
+				.circle{
+					position: absolute;
+					top: -4px;
+					left: -33px;
+					width: 26px;
+					height: 26px;
+					background-color: #ecbc4d;
+					transform: rotate(180deg);
+					color: #0f0d0e;
+					font: 500 16px/16px 'Proba';
+					text-align: center;
+					padding-top: 5px;
+					border-radius: 100%;
+				}
+			}
+		}
+	}
+
+	h1 {
+		width: 630px;
+		display: block;
+		color: #e1e1e1;
+		font: 400 80px/90px 'Proba';
+		text-transform: uppercase;
+		margin-bottom: 35px;
+
+		@include mobile{
+			width: 100%;
+			font: 400 60px/70px 'Proba';
+		}
+	}
+
+	.sub_h1{
+		width: 500px;
+		display: block;
+		color: #e1e1e1;
+		font: 300 25px/35px 'Proba';
+		margin-bottom: 60px;
+
+		@include mobile{
+			width: 100%;
+			margin-bottom: 30px;
+		}
+	}
+
+	.button-yellow{
+		margin-right: 30px;
+		vertical-align: top;
+
+		@include mobile{
+			margin-right: 0;
+			margin-bottom: 50px;
+		}
+
+		&:hover{
+			@extend .btn-ghost;
+		}
+	}
+
+	.copy-text{
+		width: 70%;
+		display: inline-block;
+		vertical-align: top;
+		color: #8c8c8c;
+		font: 400 16px/25px 'Proba';
+		margin-top: 3px;
+
+		@include mobile{
+			width: 100%;
+		}
+
+		.link-yellow{
+			color: #ecbc4d;
+			display: inline-block;
+			border-bottom: 1px dotted #ecbc4d;
+
+			&:hover{
+				border-bottom: none;
+			}
+		}
+	}
+
+	.line-grey{
+		width: 100%;
+		display: block;
+		height: 1px;
+		background-color: rgba(93, 93, 93, 0.5);
+		margin-bottom: 48px;
+		margin-top: 68px;
+
+		@include mobile{
+			margin-top: 50px;
+		}
+	}
+
+		.list-block{
+			width: 100%;
+			display: inline-block;
+			position: relative;
+
+			@include mobile{
+				margin-bottom: 30px;
+			}
+
+			&:hover{
+				.circle-yellow{
+					@extend .buzz-out;
+				}
+			}
+
+			.circle-yellow{
+				display: inline-block;
+				width: 95px;
+				height: 95px;
+				margin-right: 15px;
+				position: relative;
+				vertical-align: top;
+				top: 0;
+				left: 0;
+
+				.money-icon{
+					display: block;
+					width: 50px;
+					height: 48px;
+					@include abs-center;
+				}
+
+				.list-icon{
+					display: block;
+					width: 46px;
+					height: 49px;
+					@include abs-center;
+				}
+
+				.card-icon{
+					display: block;
+					width: 32px;
+					height: 49px;
+					@include abs-center;
+				}
+			}
+
+			.text{
+				width: 221px;
+				display: inline-block;
+				vertical-align: top;
+				margin-top: 20px;
+				color: #e1e1e1;
+				font: 400 20px/25px 'Proba';
+
+				&.mobile{
+					display: none;
+
+					@include mobile{
+						display: inline-block;
+					}
+				}
+
+				@include mobile{
+					width: 78%;
+					font: 400 25px/25px 'Proba';
+					display: none;
+				}
+			}
+		}
+}
+
+//=================== section-world
+.section-world{
+	padding-top: 80px;
+
+	h3{
+		width: 710px;
+		text-align: center;
+		display: block;
+		margin: 0 auto 25px;
+		color: #e1e1e1;
+		font: 300 40px/50px 'Proba';
+		text-transform: uppercase;
+
+		@include mobile{
+			width: 100%;
+			font: 300 39px/50px 'Proba';
+		}
+	}
+
+	h2{
+		width: 630px;
+		margin: 0 auto;
+		text-align: center;
+		display: block;
+		color: #ecbc4d;
+		font: 400 70px/80px 'Proba';
+		text-transform: uppercase;
+
+		@include mobile{
+			width: 100%;
+			font: 600 60px/70px 'Proba';
+		}
+	}
+
+	.world-img{
+		position: absolute;
+		width: 100%;
+		height: 1263px;
+		display: block;
+		top: 305px;
+		left: 0;
+		background: url("../images/map-img.png") 50% 50% no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+
+		@include mobile{
+			height: 400px;
+			top: 470px;
+		}
+	}
+
+	.airplan{
+		position: absolute;
+		top: 700px;
+		right: 0;
+		width: 515px;
+
+		@include mobile{
+			width: 160px;
+			top: 520px;
+			right: 135px;
+		}
+
+	}
+
+	.list{
+		display: block;
+		padding: 0;
+		width: 96%;
+		margin-top: 1300px;
+		margin-left: 0;
+		margin-right: 10px;
+		list-style-type: none;
+
+		@include mobile{
+			margin-top: 520px;
+		}
+
+		li{
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-bottom: 1px solid #333131;
+
+			&:hover{
+				.circle-yellow{
+					@extend .buzz-out;
+				}
+			}
+
+			&:nth-child(5){
+				border-bottom: none;
+
+				@include mobile{
+					border-bottom: 1px solid #333131;
+				}
+			}
+
+			.circle-yellow{
+				width: 30px;
+				height: 30px;
+				display: inline-block;
+				position: relative;
+				text-align: center;
+				top: 0;
+				left: 0;
+				color: #211d1e;
+				font: 400 16px/30px 'Proba';
+
+				&.under{
+					background-color: #cc8d39;
+				}
+			}
+
+			span{
+				width: 140px;
+				display: inline-block;
+				vertical-align: top;
+				margin-top: 6px;
+				margin-left: 20px;
+				color: #e0e0e0;
+				font: 400 16px/16px 'Proba';
+			}
+		}
+
+		.border-bottom{
+			border-bottom: 1px solid #333131 !important;
+		}
+
+		.border-none{
+			border: none;
+		}
+	}
+
+	.button-yellow{
+		margin-top: 40px;
+		display: block;
+
+		@include mobile{
+			margin: 60px auto 0;
+		}
+	}
+
+	.what-wrapper{
+		width: 85%;
+		height: auto;
+		display: block;
+		margin: 210px auto 0;
+		padding-top: 170px;
+		padding-bottom: 150px;
+		position: relative;
+		background-color: #e1e1e1;
+
+		@include mobile{
+			width: 100%;
+			margin: 300px auto 0;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-bottom: 80px;
+		}
+
+		.visa{
+			position: absolute;
+			top: 600px;
+			right: -220px;
+			width: 505px;
+			height: 427px;
+			display: block;
+
+			.first{
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+
+			.second{
+				position: absolute;
+				left: 0;
+				top: -155px;
+			}
+
+			@include tablet{
+				right: -130px;
+			}
+
+			@include mobile{
+				position: relative;
+				top: 0;
+				right: 0;
+				margin-top: -230px;
+				margin-left: 30px;
+			}
+		}
+
+		h3{
+			width: 470px;
+			display: block;
+			text-align: center;
+			color: #211d1e;
+			text-transform: uppercase;
+			font: 500 70px/80px 'Proba';
+			margin-bottom: 35px;
+		}
+
+		.sub_title{
+			width: 640px;
+			display: block;
+			margin: 0 auto 20px;
+			text-align: center;
+			color: #211d1e;
+			font: 400 22px/30px 'Proba';
+
+			@include mobile{
+				width: 100%;
+			}
+
+			span{
+				font-weight: 700;
+			}
+		}
+
+		.text{
+			width: 450px;
+			display: block;
+			color: #211d1e;
+			font: 400 18px/30px 'Proba';
+			margin-bottom: 50px;
+			margin-left: 95px;
+
+
+			@include mobile{
+				width: 100%;
+				margin-left: 0;
+			}
+		}
+
+		.border-box{
+			width: 445px;
+			display: block;
+			border: 2px dashed #adadad;
+			padding: 38px 50px;
+			color: #211d1e;
+			font: 400 18px/30px 'Proba';
+			margin-bottom: 52px;
+			margin-left: 95px;
+
+
+			@include mobile{
+				width: 100%;
+				margin-left: 0;
+				text-align: left;
+			}
+		}
+
+		.warning-block{
+			width: 445px;
+			border: 1px solid #ecbc4d;
+			padding-top: 20px;
+			padding-bottom: 10px;
+			padding-left: 25px;
+			margin-left: 95px;
+
+			@include mobile{
+				width: 80%;
+				margin: 0 auto;
+			}
+
+			.circle-yellow{
+				width: 26px;
+				height: 26px;
+				background-color: #ecbc4d;
+				position: relative;
+				top: 0;
+				left: 0;
+				display: inline-block;
+
+				span{
+					@include abs-center;
+					width: 3px;
+					height: 11px;
+					color: #0f0d0e;
+					display: block;
+					font: 400 14px/14px 'Proba';
+					-webkit-transform: rotate(180deg);
+					-moz-transform: rotate(180deg);
+					-ms-transform: rotate(180deg);
+					-o-transform: rotate(180deg);
+					transform: rotate(180deg);
+
+				}
+			}
+
+			.link{
+				width: 340px;
+				display: inline-block;
+				vertical-align: top;
+				margin-top: 4px;
+				margin-left: 10px;
+				color: #211d1e !important;
+				font: 400 16px/16px 'Proba';
+				border-bottom: 1px dashed #211d1e;
+			}
+
+			&:hover{
+				.circle-yellow{
+					@include general-transition;
+					-webkit-transform: rotate(180deg);
+					-moz-transform: rotate(180deg);
+					-ms-transform: rotate(180deg);
+					-o-transform: rotate(180deg);
+					transform: rotate(180deg);
+				}
+
+				.link{
+					@include general-transition;
+					border: none;
+				}
+			}
+
+			&:not(hover){
+				.circle-yellow{
+					@include general-transition;
+				}
+
+				.link{
+					@include general-transition;
+				}
+			}
+		}
+	}
+}
+
+
+//=================== section-business
+.section-business{
+	padding-top: 200px;
+	padding-bottom: 200px;
+	background: url("../images/man-fon.jpg") 10% 65% no-repeat;
+
+	@include mobile{
+		padding-top: 210px;
+      padding-bottom: 100px;
+		background: url("../images/man-fon.jpg") 40% 50% no-repeat;
+	}
+
+	h3{
+		width: 840px;
+		display: block;
+		margin: 0 auto 26px;
+		text-align: center;
+		color: #8c8b8b;
+		text-transform: uppercase;
+		font: 300 40px/50px 'Proba';
+
+		@include mobile{
+			width: 100%;
+		}
+	}
+
+	.sub_title{
+		width: 640px;
+		display: block;
+		margin: 0 auto 45px;
+		text-align: center;
+		color: #e1e1e1;
+		font: 300 18px/30px 'Proba';
+
+		@include mobile{
+			width: 100%;
+		}
+	}
+
+	.under-button{
+		width: 350px;
+		height: 68px;
+		display: block;
+		margin: 0 auto 200px;
+		border: 1px solid #ecbc4d;
+		text-align: center;
+		padding-top: 25px;
+		background-color: transparent !important;
+
+		&:hover{
+			@extend .btn-ghost;
+			span{
+				@include general-transition;
+				border: none;
+			}
+		}
+
+		span{
+			width: 245px;
+			margin: 0 auto;
+			display: block;
+			color: #ecbc4d;
+			font: 300 18px/18px 'Proba';
+			border-bottom: 1px dashed #ecbc4d;
+		}
+	}
+
+	.business-block{
+		width: 750px;
+		display: flex;
+		justify-content: space-between;
+		margin: 60px auto 35px;
+
+
+
+		@include mobile{
+			width: 100%;
+		}
+
+		.number{
+			width: 40px;
+			display: inline-block;
+			color: #e1e1e1;
+			font: 700 80px/80px 'Proba';
+			text-transform: uppercase;
+		}
+
+		.years{
+			width: 75px;
+			display: inline-block;
+			color: #e1e1e1;
+			font: 700 16px/16px 'Proba';
+			text-transform: uppercase;
+			margin-top: 47px;
+
+			@include mobile{
+				margin-top: 0;
+			}
+		}
+
+		.text{
+			color: #e1e1e1;
+			font: 700 40px/40px 'Proba';
+			text-transform: uppercase;
+			display: inline-block;
+			width: 460px;
+			margin-top: 25px;
+
+			@include mobile{
+				width: 76%;
+				margin-top: 15px;
+			}
+
+			&.last{
+				margin-top: -10px;
+
+				@include mobile{
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+
+	.yellow{
+		width: 100%;
+		padding-top: 65px;
+		padding-bottom: 35px;
+
+
+		@include mobile{
+			width: 100%;
+		}
+
+		.business-block{
+			width: 830px;
+			margin-left: 85px;
+			margin-top: 0;
+			margin-bottom: 0;
+
+
+			@include mobile{
+				width: 95%;
+				margin: 0 auto;
+			}
+		}
+
+		&.i-1{
+
+			.business-block{
+				width: 750px;
+				display: flex;
+				justify-content: space-between;
+				margin: 0 auto;
+
+				@include mobile{
+					width: 95%;
+				}
+			}
+
+			.number{
+				width: 40px;
+				display: inline-block;
+				font: 700 80px/80px 'Proba';
+				text-transform: uppercase;
+			}
+
+			.years{
+				width: 75px;
+				display: inline-block;
+				font: 700 16px/16px 'Proba';
+				text-transform: uppercase;
+				margin-top: 47px;
+
+				@include mobile{
+					margin-top: 0;
+				}
+			}
+
+			.text{
+				font: 700 40px/40px 'Proba';
+				text-transform: uppercase;
+				display: inline-block;
+				width: 460px;
+				margin-top: 25px;
+
+				@include mobile{
+					width: 76%;
+					margin-top: 15px;
+				}
+
+				&.last{
+					margin-top: -10px;
+
+					@include mobile{
+						margin-top: 10px;
+					}
+				}
+			}
+		}
+
+		&:hover{
+			@include general-transition;
+			background-color: #ecbc4d;
+
+			.number,
+			.years,
+			.text{
+				color: #211d1e;
+			}
+		}
+
+		.number,
+		.years,
+		.text{
+			color: #e1e1e1;
+		}
+
+		.number{
+			width: 120px;
+		}
+
+		.text{
+			margin-top: -10px;
+
+			@include mobile{
+				margin-top: 0;
+				width: 76%;
+			}
+		}
+	}
+
+	.last-wrapper{
+		width: 96%;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 220px;
+		margin-left: 65px;
+
+		@include mobile{
+          display: block;
+			margin-top: 145px;
+          margin-left: 0;
+		}
+
+		.left-block{
+			width: 230px;
+			display: inline-block;
+			color: #8c8c8c;
+			text-transform: uppercase;
+			font: 400 34px/34px 'Proba';
+
+			@include mobile{
+				display: block;
+				margin-bottom: 80px;
+			}
+		}
+
+		.right-block{
+			width: 655px;
+			display: inline-block;
+			float: right;
+			@include mobile{
+				display: block;
+				width: 88%;
+              float: none;
+              padding-left: 12%;
+			}
+
+			.block_sub{
+				display: block;
+				margin-bottom: 45px;
+				position: relative;
+
+				&:after{
+					content: '+';
+					display: block;
+					width: 10px;
+					height: 10px;
+					position: absolute;
+					color: #e1e1e1;
+					font: 400 20px/20px 'Proba';
+					top: 0;
+					left: -65px;
+				}
+
+				.title{
+					color: #e1e1e1;
+					text-transform: uppercase;
+					font: 400 22px/22px 'Proba';
+					display: block;
+					margin-bottom: 23px;
+				}
+
+				.text{
+					color: #8c8c8c;
+					font: 400 22px/27px 'Proba';
+					display: block;
+
+                  @include mobile{
+                    font: 400 20px/25px 'Proba';
+                  }
+				}
+			}
+		}
+	}
+}
+
+//==================== section-diploma
+.section-diploma{
+
+  @include mobile{
+    padding-top: 140px;
+  }
+	h1{
+		color: #ecbc4d;
+		text-align: center;
+		width: 720px;
+		display: block;
+		margin: 0 auto 30px;
+		font: 500 120px/110px 'Proba';
+		text-transform: uppercase;
+
+      @include mobile{
+        width: 100%;
+        font: 500 80px/70px 'Proba';
+      }
+	}
+
+	h2{
+		width: 900px;
+		display: block;
+		margin: 0 auto 60px;
+		text-align: left;
+		color: #e1e1e1;
+		text-transform: uppercase;
+		font: 500 80px/90px 'Proba';
+
+      @include mobile{
+        width: 100%;
+        font: 500 50px/60px 'Proba';
+      }
+	}
+
+	.diploma-wrapper{
+		width: 990px;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+      position: relative;
+
+      @include mobile{
+        width: 100%;
+      }
+
+		.option-block{
+			width: 290px;
+			display: inline-block;
+			margin-top: 225px;
+
+          @include mobile{
+            width: 260px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+			span{
+				display: block;
+				width: 100%;
+				text-align: right;
+				color: #8c8c8c;
+				font: 400 18px/30px 'Proba';
+				margin-bottom: 75px;
+
+              @include mobile{
+                margin-bottom: 115px;
+				  text-align: left;
+              }
+			}
+		}
+
+		.plus-block{
+			width: 330px;
+			padding-top: 60px;
+			padding-left: 48px;
+			padding-right: 48px;
+
+			@include mobile{
+				width: 50%;
+				padding-bottom: 45px;
+			}
+
+			.title{
+				width: 220px;
+				display: block;
+				color: #e1e1e1;
+				text-transform: uppercase;
+				font: 600 22px/30px 'Proba';
+				margin-bottom: 50px;
+				text-align: center;
+			}
+
+			.list{
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+
+				li{
+					padding-top: 50px;
+					padding-bottom: 50px;
+					text-align: center;
+					border-top: 1px solid #333131;
+					border-bottom: 1px solid #333131;
+					color: #e1e1e1;
+					font: 400 30px/30px 'Proba';
+
+                  @include mobile{
+                    padding-top: 113px;
+                    padding-bottom: 40px;
+                  }
+
+					&:nth-child(2){
+						border: none;
+					}
+
+					&:nth-child(3){
+						border-bottom: none;
+
+						@include mobile{
+							border-bottom: 1px solid #333131;
+						}
+					}
+				}
+			}
+
+			&.yellow{
+				background-color: #ecbc4d;
+
+				.title{
+					color: #211d1e;
+					margin-bottom: 68px;
+					margin-top: 12px;
+				}
+
+				.list{
+					li{
+						color: #211d1e;
+						border-top: 1px solid rgba(51, 49, 49, 0.2);
+						border-bottom: 1px solid rgba(51, 49, 49, 0.2);
+
+						&:nth-child(2){
+							border: none;
+						}
+
+						&:nth-child(3){
+							border-bottom: none;
+
+							@include mobile{
+								border-bottom: 1px solid rgba(51, 49, 49, 0.2);
+							}
+						}
+					}
+				}
+			}
+
+		}
+	}
+}
+
+
+//==================== section-client
+.section-client{
+	padding-top: 300px;
+	padding-bottom: 130px;
+
+	@include mobile{
+		padding-top: 170px;
+	}
+
+	.sub_title{
+		color: #bababa;
+		text-transform: uppercase;
+		font: 400 18px/18px 'Proba';
+		display: block;
+		margin-bottom: 15px;
+	}
+
+	h2{
+		width: 730px;
+		display: block;
+		text-transform: uppercase;
+		font: 500 80px/90px 'Proba';
+		color: #e1e1e1;
+		margin-bottom: 77px;
+
+		@include mobile{
+			width: 100%;
+			font: 500 60px/70px 'Proba';
+		}
+	}
+
+	.wrapper-client-slider,
+	.wrapper-client-mobile-slider{
+		width: 100%;
+		position: relative;
+		margin-bottom: 80px;
+
+		@include mobile{
+			display: none;
+		}
+
+		.client-wrapper{
+			position: relative;
+			width: 100%;
+			height: auto;
+			background: url("../images/slide-img.jpg") no-repeat;
+			-webkit-background-size: cover;
+			background-size: cover;
+			overflow: hidden;
+			padding: 20px;
+			margin-bottom: 20px;
+
+
+			.client-block{
+				width: 100%;
+				background-color: #ecbc4d;
+				padding: 45px 45px 35px;
+				z-index: 100;
+				opacity: 0;
+
+				span{
+					color: #211d1e;
+					font: 300 18px/30px 'Proba';
+					display: block;
+					margin-bottom: 15px;
+				}
+			}
+
+			.block-desc{
+				width: 180px;
+				display: block;
+
+				.avatar{
+					width: 40px;
+					height: 40px;
+					display: inline-block;
+					margin-right: 12px;
+				}
+
+				.text{
+					width: 120px;
+					display: inline-block;
+					vertical-align: top;
+					margin-top: 12px;
+					color: #211d1e;
+					font: 500 16px/16px 'Proba';
+				}
+			}
+
+			&:hover{
+				.client-block{
+					@include general-transition;
+					opacity: 1;
+				}
+			}
+
+			&:not(hover){
+				.client-block{
+					@include general-transition;
+				}
+			}
+		}
+
+		.button-block{
+			position: absolute;
+			top: 820px;
+			right: 95px;
+			width: 160px;
+			height: 13px;
+
+			@include mobile{
+              top: 115%;
+              right: 0;
+			}
+
+			.client-next,
+			.client-prev{
+				width: 65px;
+				height: 10px;
+				margin-top: 0;
+				position: absolute;
+				top: 0;
+
+				.left_arrow{
+					width: 65px;
+					height: 10px;
+					position: absolute;
+					top: 0;
+					left: 0;
+
+					&:hover{
+						fill: #ecbc4d;
+					}
+				}
+			}
+
+			.client-next{
+				right: 0;
+				-webkit-transform: rotate(180deg);
+				-moz-transform: rotate(180deg);
+				-ms-transform: rotate(180deg);
+				-o-transform: rotate(180deg);
+				transform: rotate(180deg);
+			}
+
+			.client-prev{
+				left: 0;
+			}
+		}
+
+		.client-pagination,
+		.client-mobile-pagination{
+			bottom: -85px;
+		}
+	}
+
+	.wrapper-client-mobile-slider{
+		display: none;
+
+		@include mobile{
+			display: block;
+		}
+	}
+}
+
+//==================== section-travel
+.section-travel{
+	padding-top: 274px;
+	background: fixed url("../images/travel-fon.jpg") 100% 1% no-repeat;
+
+	@include tablet{
+		background: fixed url("../images/travel-fon.jpg") 100% 2% no-repeat;
+	}
+
+  @include mobile{
+    background: fixed url("../images/travel-fon.jpg") 46% -1% no-repeat;
+  }
+
+	.empty-block{
+		width: 100%;
+		height: 10px;
+		display: block;
+
+      @include mobile{
+        display: none;
+      }
+	}
+
+	.warning-block{
+		width: 95px;
+		height: 95px;
+		border: 3px solid #ecbc4d;
+		-webkit-border-radius: 100%;
+		-moz-border-radius: 100%;
+		border-radius: 100%;
+		position: relative;
+		margin-bottom: 20px;
+
+		span{
+			color: #ecbc4d;
+			width: 13px;
+			height: 65px;
+			display: block;
+			@include abs-center;
+			font: 500 65px/65px 'Proba';
+		}
+	}
+
+	.white-text{
+		width: 100%;
+		display: block;
+		color: #e1e1e1;
+		font: 400 40px/50px 'Proba';
+		margin-bottom: 85px;
+
+      @include mobile{
+        margin-bottom: 100px;
+      }
+	}
+
+	h2{
+		color: #ecbc4d;
+		font: 500 70px/80px 'Proba';
+		text-transform: uppercase;
+		margin-bottom: 63px;
+
+		span{
+			text-transform: uppercase;
+			color: #bababa;
+			display: block;
+			width: 100%;
+			font: 400 22px/22px 'Proba';
+			margin-bottom: 30px;
+		}
+	}
+
+	.button-yellow{
+		margin-bottom: 250px;
+      display: block;
+
+      @include mobile{
+        margin: 0 auto 170px;
+      }
+	}
+
+	#get{
+		width: 100%;
+		height: 100px;
+		display: block;
+	}
+}
+
+//====================  section-get
+.section-get{
+	padding-top: 105px;
+	padding-bottom: 160px;
+
+  @include mobile{
+    padding-bottom: 0;
+  }
+
+	h2{
+		width: 582px;
+		display: inline-block;
+		color: #e1e1e1;
+		font: 500 80px/90px 'Proba';
+		margin-bottom: 125px;
+		text-transform: uppercase;
+
+      @include mobile{
+        margin-bottom: 80px;
+      }
+	}
+
+	.sub-text{
+		width: 440px;
+		display: inline-block;
+		float: right;
+		color: #e1e1e1;
+		font: 400 22px/30px 'Proba';
+		margin-top: 32px;
+
+      @include mobile{
+        display: none;
+      }
+
+		span{
+			color: #ecbc4d;
+		}
+	}
+
+	.triangle{
+		width: 37px;
+		height: 19px;
+		margin-left: 90px;
+		margin-bottom: 35px;
+
+      @include mobile{
+        margin-left: -8px;
+      }
+	}
+
+	.row{
+		position: relative;
+
+		.line{
+			width: 100%;
+			height: 1px;
+			background-color: rgba(108, 106, 107, 0.3);
+			position: absolute;
+			top: 42px;
+			left: 0;
+			z-index: -1;
+		}
+
+		&.margin-top{
+			margin-top: 60px;
+		}
+
+      &.margin-top-last{
+        margin-top: 20px;
+      }
+
+	}
+
+	.number{
+		color: #e1e1e1;
+		font: 500 60px/60px 'Proba';
+		display: block;
+		margin-bottom: 70px;
+
+		span{
+			color: #ecbc4d;
+		}
+
+      @include mobile{
+        margin-bottom: 30px;
+      }
+	}
+
+	.title{
+		color: #e1e1e1;
+		font: 500 30px/40px 'Proba';
+		display: block;
+		margin-bottom: 27px;
+		text-transform: uppercase;
+	}
+
+	.text{
+		color: #8c8c8c;
+		font: 400 18px/30px 'Proba';
+		display: block;
+		margin-bottom: 35px;
+	}
+
+	.link-yellow{
+		width: 235px;
+		color: #ecbc4d;
+		display: block;
+		font: 400 18px/18px 'Proba';
+		border-bottom: 1px dashed #ecbc4d;
+		margin-top: -20px;
+		box-sizing: border-box;
+
+		&:hover{
+			border: none;
+		}
+	}
+}
+
+
+//==================== section-question
+.section-question{
+	padding-top: 160px;
+    padding-bottom: 200px;
+
+  @include mobile{
+    padding-bottom: 185px;
+  }
+
+	h2{
+		text-align: center;
+		color: #e1e1e1;
+		font: 500 80px/80px 'Proba';
+		text-transform: uppercase;
+		display: block;
+		margin-bottom: 95px;
+	}
+
+	.questions-block{
+		width: 100%;
+
+        .question-item{
+          width: 100%;
+
+          .question{
+            padding-top: 65px;
+            padding-bottom: 75px;
+            padding-left: 95px;
+            border-top: 1px solid #383334;
+            border-bottom: 1px solid #383334;
+            position: relative;
+
+            @include mobile{
+              padding-left: 30px;
+              padding-right: 30px;
+              padding-bottom: 65px;
+            }
+
+            &.border-top{
+              border-top: none;
+            }
+
+
+          .question-text{
+            width: 780px;
+            display: block;
+            color: #e1e1e1;
+            text-transform: uppercase;
+            font: 700 30px/40px 'Proba';
+
+            @include mobile{
+              width: 85%;
+            }
+          }
+
+          .question-arrow-holder{
+            width: 60px;
+            height: 60px;
+            border: 1px solid #e1e1e1;
+            background-color: transparent;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            border-radius: 100%;
+            position: absolute;
+            top: 35%;
+            right: 100px;
+            text-align: center;
+
+            @include mobile{
+              right: 30px;
+            }
+
+            .plus{
+              color: #e1e1e1;
+              font-size: 65px;
+				line-height: 29px;
+				width: 28px;
+				height: 24px;
+				@include abs-center;
+            }
+          }
+          }
+
+          .answer{
+            padding-top: 48px;
+            padding-left: 95px;
+            padding-bottom: 45px;
+            border-bottom: 1px solid #383334;
+			  text-align: left;
+
+            @include mobile{
+              padding-left: 30px;
+              padding-top: 50px;
+              padding-bottom: 55px;
+            }
+
+            p{
+              width: 830px;
+              display: block;
+              color: #8c8c8c;
+              font: 400 22px/35px 'Proba';
+
+              @include mobile{
+                width: 100%;
+                text-align: left;
+              }
+            }
+          }
+
+          &.active{
+
+            .question{
+              @include general-transition;
+              background-color: #ecbc4d;
+            }
+
+            .question-text{
+              @include general-transition;
+              color: #211d1e;
+            }
+
+            .question-arrow-holder{
+              @include general-transition;
+              -webkit-transform: rotate(45deg);
+              -moz-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              -o-transform: rotate(45deg);
+              transform: rotate(45deg);
+              border: 1px solid #211d1e;
+
+              .plus{
+                color: #211d1e;
+              }
+            }
+          }
+        }
+	}
+}
+
+//==================== section-form
+.section-form{
+	background-color: #e1e1e1;
+	padding-top: 165px;
+	padding-bottom: 240px;
+
+  @include mobile{
+    padding-top: 155px;
+    padding-bottom: 145px;
+  }
+
+	h2{
+		color: #211d1e;
+		font: 500 70px/80px 'Proba';
+		display: block;
+		margin-bottom: 30px;
+		text-transform: uppercase;
+
+      @include mobile{
+        font: 500 50px/50px 'Proba';
+        margin-bottom: 20px;
+      }
+	}
+
+	.sub_title{
+		color: #949494;
+		font: 400 22px/22px 'Proba';
+		display: block;
+		margin-bottom: 60px;
+		text-transform: uppercase;
+		text-align: left;
+
+      @include mobile{
+        text-align: left;
+        font: 400 20px/20px 'Proba';
+      }
+	}
+
+	.man{
+		position: absolute;
+		width: 717px;
+		height: 807px;
+		bottom: -240px;
+		right: -100px;
+
+      @include mobile{
+        display: none;
+      }
+	}
+}
+
+//==================== section map
+.map-holder {
+  	height: 0px;
+}

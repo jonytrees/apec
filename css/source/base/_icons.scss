@@ -1,0 +1,85 @@
+//====================icons
+.icon {
+	display: inline-block;
+	overflow: hidden;
+	text-indent: -9999px;
+	background: url('../images/sprite.png') no-repeat transparent;
+	position: relative;
+	vertical-align: middle;
+}
+
+.will-change {
+	background: none;
+
+	&::before,
+	&::after {
+		@include general-transition;
+		@include abs-center;
+		content: "";
+		overflow: hidden;
+		background: url('../images/sprite.png') no-repeat transparent;
+	}
+
+	&::before {
+		opacity: 1;
+	}
+
+	&::after {
+		opacity: 0;
+	}
+
+	&:hover,
+	&:active,
+	&.active {
+
+		&::before {
+		opacity: 0;
+		}
+
+		&::after {
+		opacity: 1;
+		}
+	}
+
+	&:hover,
+	&:active,
+	a:hover &,
+	a:active &,
+	.question:hover &,
+	.question:active &,
+	.question-item.active .question & {
+
+		&::before {
+		opacity: 0;
+		}
+
+		&::after {
+		opacity: 1;
+		}
+	}
+}
+
+//==================== SVG icons
+.svg-icon {
+	@include general-transition;
+	display: inline-block;
+	vertical-align: middle;
+	fill-rule: evenodd;
+	clip-rule: evenodd;
+}
+
+.close {
+	width: 16px !important;
+	height: 16px !important;
+	background: url("../images/close-icon.png");
+
+	a:hover &,
+	a:active & {
+		fill: $accent-color;
+	}
+}
+
+.left_arrow{
+	fill: #6c6a6b;
+
+}
