@@ -1,185 +1,192 @@
 //==================== modal overlay
 html {
 
-	&.si-lock {
-		overflow: hidden !important;
-	}
+  &.si-lock {
+    overflow: hidden !important;
+  }
 
-	&.si-lock2 {
-		height: 100% !important;
-		overflow: hidden !important;
-	}
+  &.si-lock2 {
+    height: 100% !important;
+    overflow: hidden !important;
+  }
 }
 
 .fancybox-margin {
-  	margin-right: 0 !important
+  margin-right: 0 !important
 }
 
 .si-overlay {
-	@include abs-center-fixed;
-	display: none;
-	background: transparentize(#211d1e, .2);
-	z-index: 203;
+  @include abs-center-fixed;
+  display: none;
+  background: transparentize(#211d1e, .2);
+  z-index: 203;
 }
 
 .si-overlay-2 {
-	@extend .si-overlay;
-	z-index: 205;
+  @extend .si-overlay;
+  z-index: 205;
 }
 
 .si-modals-wrapper {
-	@include abs-center-fixed;
-	display: none;
-	overflow: auto;
-	-webkit-overflow-scrolling: touch;
-	z-index: 203;
+  @include abs-center-fixed;
+  display: none;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 203;
 }
 
 .si-modals-wrapper-2 {
-	@extend .si-modals-wrapper;
-	z-index: 205;
+  @extend .si-modals-wrapper;
+  z-index: 205;
 }
 
 //==================== modal close
 .si-close {
-	@extend .icon;
-	@extend .close !optional;
-	position: absolute !important;
-	top: 30px;
-	right: 30px;
+  @extend .icon;
+  @extend .close !optional;
+  position: absolute !important;
+  top: 30px;
+  right: 30px;
 }
 
 //==================== modal - basic
 .si-modal {
-	@include general-transition;
-	@include transform(scale(0.7));
-	transition-duration: 0.5s;
-	display: none;
-	position: relative;
-	color: #211d1e;
-	background-color: #e1e1e1;
-	padding: 94px 96px 100px;
-	width: 920px;
-	margin: 50px auto;
-
-	@include mobile{
-		width: 95%;
-		padding: 90px 30px 90px;
-	}
-
-	&.si-visible {
-		@include transform(scale(1));
-	}
-
-	.btn-holder {
-		margin-top: 0px;
-	}
-
-	.btn {
-		min-width: 300px;
-	}
-
-	.modal-form-title {
-		width: 420px;
-		margin: 0 auto 20px;
-		display: block;
-		color: #211d1e;
-		font: 700 50px/60px 'Proba';
-		text-transform: uppercase;
-		text-align: center;
-	}
-
-&.option-modal{
-	padding: 45px 0 0;
-	height: 520px;
-
-	.modal-form-title {
-		display: block;
-		color: #211d1e;
-		font: 700 40px/40px 'Proba';
-		margin-bottom: 35px;
-		text-align: center;
-	}
-}
-
-
-.line{
-	height: 1px;
-	background-color: #cacaca;
-	width: 100%;
-}
-
-.left-block{
-	width: 40%;
-	display: inline-block;
-	border-right: 1px solid #cacaca;
-
-}
-
-.title{
-	margin-top: 25px;
-	padding-bottom: 25px;
-	padding-left: 60px;
-	display: block;
-	border-bottom: 1px solid #cacaca;
-	color: #211d1e;
-	font: 600 16px/16px 'Proba';
-}
-
-.right-block{
-	width: 60%;
-	display: inline-block;
-	float: right;
+  @include general-transition;
+  @include transform(scale(0.7));
+  transition-duration: 0.5s;
+  display: none;
   position: relative;
-}
+  color: #211d1e;
+  background-color: #e1e1e1;
+  padding: 94px 96px 100px;
+  width: 920px;
+  margin: 50px auto;
 
-.modal-time {
-	text-align: center;
-	color: #211d1e;
-	font: 500 25px/25px 'Proba';
-  	margin-bottom: 90px;
-}
+  @include mobile {
+    width: 95%;
+    padding: 90px 30px 90px;
+  }
 
-	.button-yellow{
-		width: 350px;
-		height: 80px;
-		background-color: #ecbc4d;
-		text-align: center;
-		margin: 0 auto;
-		color: #211d1e;
-		font: 400 22px/22px 'Proba';
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
+  &.si-visible {
+    @include transform(scale(1));
+  }
 
-		span{
-			display: block;
-			font: 400 14px/16px 'Proba';
-			color: #9c7835;
-		}
+  .btn-holder {
+    margin-top: 0px;
+  }
 
-		&:hover{
-			color: #ffffff;
-			border: 1px solid #ecbc4d;
-			background-color: #211d1e;
-		}
-	}
+  .btn {
+    min-width: 300px;
+  }
 
-.nav-tabs{
-	height: 292px !important;
-	width: 100%;
-	overflow: auto;
+  .modal-form-title {
+    width: 420px;
+    margin: 0 auto 20px;
+    display: block;
+    color: #211d1e;
+    font: 700 50px/60px 'Proba';
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &.option-modal {
+    padding: 45px 0 0;
+    height: 520px;
+
+    @include mobile{
+      height: 600px;
+    }
+
+    .modal-form-title {
+      display: block;
+      color: #211d1e;
+      font: 700 40px/40px 'Proba';
+      margin-bottom: 35px;
+      text-align: center;
+    }
+  }
 
 
-	li{
-		display: block !important;
-		padding-top: 18px;
-		padding-bottom: 18px;
-		color: #211d1e;
-		font: 400 20px/20px 'Proba';
+  .line {
+    height: 1px;
+    background-color: #cacaca;
+    width: 100%;
+  }
+
+  .left-block {
+    width: 40%;
+    display: inline-block;
+    border-right: 1px solid #cacaca;
+
+  }
+
+  .title {
+    margin-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 60px;
+    display: block;
+    border-bottom: 1px solid #cacaca;
+    color: #211d1e;
+    font: 600 16px/16px 'Proba';
+  }
+
+  .right-block {
+    width: 60%;
+    display: inline-block;
+    float: right;
+    position: relative;
+  }
+
+  .modal-time {
+    text-align: center;
+    color: #211d1e;
+    font: 500 25px/25px 'Proba';
+    margin-bottom: 90px;
+  }
+
+  .button-yellow {
+    width: 350px;
+    height: 80px;
+    background-color: #ecbc4d;
+    text-align: center;
+    margin: 0 auto;
+    color: #211d1e;
+    font: 400 22px/22px 'Proba';
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    span {
+      display: block;
+      font: 400 14px/16px 'Proba';
+      color: #9c7835;
+    }
+
+    &:hover {
+      color: #ffffff;
+      border: 1px solid #ecbc4d;
+      background-color: #211d1e;
+    }
+  }
+
+  .nav-tabs {
+    height: 292px !important;
+    width: 100%;
+    overflow: auto;
+
+    @include mobile{
+      height: 371px !important;
+    }
+
+    li {
+      display: block !important;
+      padding-top: 18px;
+      padding-bottom: 18px;
+      color: #211d1e;
+      font: 400 20px/20px 'Proba';
       position: relative;
 
-      &:after{
+      &:after {
         content: '';
         position: absolute;
         width: 6px;
@@ -190,298 +197,170 @@ html {
         opacity: 0;
       }
 
-		span{
-			width: 15px !important;
-			display: inline-block;
-			color: #211d1e;
-			font: 400 14px/14px 'Proba';
-			margin-right: 26px;
-            padding-left: 17px !important;
-		}
-
-      &:hover{
-          background-color: #ecbc4d;
-          font: 700 20px/20px 'Proba';
-
-          span{
-            font: 700 14px/14px 'Proba';
-          }
+      span {
+        width: 15px !important;
+        display: inline-block;
+        color: #211d1e;
+        font: 400 14px/14px 'Proba';
+        margin-right: 26px;
+        padding-left: 17px !important;
       }
 
-      &.active{
+      &:hover {
         background-color: #ecbc4d;
         font: 700 20px/20px 'Proba';
 
-        &:after{
-          opacity: 1;
-        }
-
-        span{
+        span {
           font: 700 14px/14px 'Proba';
         }
       }
-	}
-}
 
-	/*************** SCROLLBAR BASE CSS ***************/
+      &.active {
+        background-color: #ecbc4d;
+        font: 700 20px/20px 'Proba';
 
-	.scroll-wrapper {
-		overflow: hidden !important;
-		padding: 0 !important;
-		position: relative;
-	}
+        &:after {
+          opacity: 1;
+        }
 
-	.scroll-wrapper > .scroll-content {
-		border: none !important;
-		box-sizing: content-box !important;
-		height: auto;
-		left: 0;
-		margin: 0;
-		max-height: none;
-		max-width: none !important;
-		overflow: scroll !important;
-		padding: 0;
-		position: relative !important;
-		top: 0;
-		width: auto !important;
-	}
+        span {
+          font: 700 14px/14px 'Proba';
+        }
+      }
+    }
+  }
 
-	.scroll-wrapper > .scroll-content::-webkit-scrollbar {
-		height: 0;
-		width: 0;
-	}
+  .scrollbar-inner::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+  }
 
-	.scroll-element {
-		display: block;
-	}
-	.scroll-element, .scroll-element div {
-		box-sizing: content-box;
-	}
+  ::-webkit-scrollbar-thumb {
+    width: 6px;
+    background: rgba(33, 29, 30, .8);
+    border-radius: 60px;
+  }
 
-	.scroll-element.scroll-x.scroll-scrollx_visible,
-	.scroll-element.scroll-y.scroll-scrolly_visible {
-		display: block;
-	}
-
-	.scroll-element .scroll-bar,
-	.scroll-element .scroll-arrow {
-		cursor: default;
-	}
-
-	.scroll-textarea {
-		border: 1px solid #000;
-		border-top-color: #999999;
-	}
-	.scroll-textarea > .scroll-content {
-		overflow: hidden !important;
-	}
-	.scroll-textarea > .scroll-content > textarea {
-		border: none !important;
-		box-sizing: border-box;
-		height: 100% !important;
-		margin: 0;
-		max-height: none !important;
-		max-width: none !important;
-		overflow: scroll !important;
-		outline: none;
-		padding: 2px;
-		position: relative !important;
-		top: 0;
-		width: 100% !important;
-	}
-	.scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {
-		height: 0;
-		width: 0;
-	}
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
 
 
-
-
-	/*************** SIMPLE INNER SCROLLBAR ***************/
-
-	.scrollbar-inner > .scroll-element,
-	.scrollbar-inner > .scroll-element div
-	{
-		border: none;
-		margin: 0;
-		padding: 0;
-		position: absolute;
-		z-index: 10;
-	}
-
-	.scrollbar-inner > .scroll-element div {
-		display: block;
-		height: 100%;
-		left: 0;
-		top: 0;
-		width: 100%;
-	}
-
-	.scrollbar-inner > .scroll-element.scroll-x {
-		bottom: 2px;
-		height: 8px;
-		left: 0;
-		width: 100%;
-	}
-
-	.scrollbar-inner > .scroll-element.scroll-y {
-		height: 100%;
-		right: 2px;
-		top: 0;
-		width: 8px;
-	}
-
-	.scrollbar-inner > .scroll-element .scroll-element_outer {
-		overflow: hidden;
-	}
-
-	.scrollbar-inner > .scroll-element .scroll-element_outer,
-	.scrollbar-inner > .scroll-element .scroll-element_track,
-	.scrollbar-inner > .scroll-element .scroll-bar {
-		-webkit-border-radius: 8px;
-		-moz-border-radius: 8px;
-		border-radius: 8px;
-	}
-
-	.scrollbar-inner > .scroll-element .scroll-element_track,
-	.scrollbar-inner > .scroll-element .scroll-bar {
-		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-		filter: alpha(opacity=40);
-		opacity: 0.4;
-	}
-
-	.scrollbar-inner > .scroll-element .scroll-element_track { background-color: #e0e0e0; }
-	.scrollbar-inner > .scroll-element .scroll-bar { background-color: #c2c2c2; }
-	.scrollbar-inner > .scroll-element:hover .scroll-bar { background-color: #919191; }
-	.scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar { background-color: #919191; }
-
-
-	/* update scrollbar offset if both scrolls are visible */
-
-	.scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track { left: -12px; }
-	.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track { top: -12px; }
-
-
-	.scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size { left: -12px; }
-	.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size { top: -12px; }
-
-
-	.tab-content{
-  padding-top: 25px;
-  padding-left: 53px;
-  padding-right: 75px;
-  color: #211d1e;
-  font: 500 25px/35px 'Proba';
-  position: absolute;
-}
+  .tab-content {
+    padding-top: 25px;
+    padding-left: 53px;
+    padding-right: 75px;
+    color: #211d1e;
+    font: 500 25px/35px 'Proba';
+    position: absolute;
+  }
 }
 
 //==================== modal - text
 .modal-text-block {
-  	margin-top: 0px;
+  margin-top: 0px;
 }
 
 //==================== modal - success
 .si-success-modal {
-	@extend .si-modal;
+  @extend .si-modal;
 
-	strong {
-		display: block;
-	}
+  strong {
+    display: block;
+  }
 
-	p{
-		text-align: center;
-		font: 400 20px/15px 'Proba';
-		color: #211d1e;
-	}
+  p {
+    text-align: center;
+    font: 400 20px/15px 'Proba';
+    color: #211d1e;
+  }
 }
 
 .si-success-modal-title {
-  	@extend .modal-form-title !optional;
-	font: 500 50px/50px 'Proba';
-	width: 100%;
-	text-align: center;
-	margin-bottom: 34px;
+  @extend .modal-form-title !optional;
+  font: 500 50px/50px 'Proba';
+  width: 100%;
+  text-align: center;
+  margin-bottom: 34px;
 }
 
 .success-time {
-  	@extend .modal-time !optional;
-	width: 340px;
-	margin: 0 auto 35px !important;
+  @extend .modal-time !optional;
+  width: 340px;
+  margin: 0 auto 35px !important;
 }
 
-.line-grey{
-	width: 100%;
-	height: 1px;
-	background-color: #9e9e9e;
-	margin-bottom: 37px;
+.line-grey {
+  width: 100%;
+  height: 1px;
+  background-color: #9e9e9e;
+  margin-bottom: 37px;
 }
-
 
 
 //==================== message
 .si-page-message-overlay {
-	@include general-transition;
-	@include abs-center-fixed;
-	display: block;
-	visibility: hidden;
-	z-index: 299;
-	background: transparentize(#000, .2);
-	transition-duration: 0.5s;
+  @include general-transition;
+  @include abs-center-fixed;
+  display: block;
+  visibility: hidden;
+  z-index: 299;
+  background: transparentize(#000, .2);
+  transition-duration: 0.5s;
 
-	&.show {
-		opacity: 1;
-		visibility: visible;
-	}
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .si-page-message {
-	@include general-transition;
-	@include abs-center-fixed;
-	transition-duration: 0.5s;
-	width: 101%;
-	height: 0;
-	color: #fff;
-	background: $accent-color;
-	opacity: 0;
-	visibility: hidden;
-	z-index: -5;
-	box-shadow: 0 0 10px #000;
+  @include general-transition;
+  @include abs-center-fixed;
+  transition-duration: 0.5s;
+  width: 101%;
+  height: 0;
+  color: #fff;
+  background: $accent-color;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -5;
+  box-shadow: 0 0 10px #000;
 
-	&.show {
-		height: 200px;
-		opacity: 1;
-		visibility: visible;
-		z-index: 300;
-	}
+  &.show {
+    height: 200px;
+    opacity: 1;
+    visibility: visible;
+    z-index: 300;
+  }
 }
 
 .si-page-message-inner {
-	@include general-transition;
-	font-size: 30px;
-	line-height: 36px;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	vertical-align: middle;
-	transition-duration: 0.5s;
-	opacity: 0;
-	position: relative;
+  @include general-transition;
+  font-size: 30px;
+  line-height: 36px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  transition-duration: 0.5s;
+  opacity: 0;
+  position: relative;
 
-	&.show {
-		opacity: 1;
-	}
+  &.show {
+    opacity: 1;
+  }
 
-	.centered {
-		display: table;
-		width: 100%;
-		height: 100%;
-	}
+  .centered {
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .si-page-message-text {
-	display: table-cell;
-	width: 100%;
-	height: 100%;
-	vertical-align: middle;
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
 }

@@ -68,27 +68,17 @@ jQuery(function ($) {
 
         $('html').css('width', window.innerWidth + 'px');
         $(window).resize(function () {
-           $('html').css('width', window.innerWidth + 'px');
+            $('html').css('width', window.innerWidth + 'px');
         });
         $(window).bind('scroll', function () {
-           $('html').css('width', window.innerWidth + 'px');
+            $('html').css('width', window.innerWidth + 'px');
         });
 
-        // ===================================================== All sound load
-        $.ionSound({
-            sounds: ["bip-1", "bip-2", "wuf-1", "wuf-2", "wuf-3", "wuf-4"],
-            path: template_url + "/sounds/",
-            volume: 0
-        });
-    }
-    else {
+
+    } else {
 
         // ===================================================== All sound load
-        $.ionSound({
-            sounds: ["bip-1", "bip-2", "wuf-1", "wuf-2", "wuf-3", "wuf-4"],
-            path: template_url + "/sounds/",
-            volume: 0.3
-        });
+
 
         // ===================================================== Sounds
         $(document).on('mouseenter',
@@ -100,13 +90,13 @@ jQuery(function ($) {
             '.swiper-button-next, ' +
             '.swiper-pagination-bullet, ' +
             '.tab-link', function () {
-                $.ionSound.play('bip-2');
+
             });
         SIModals.beforeOpen = function () {
-            $.ionSound.play('wuf-4');
+
         };
         SIModals.beforeClose = function () {
-            $.ionSound.play('wuf-3');
+
         };
 
         // ===================================================== smooth scrolling
@@ -219,9 +209,9 @@ jQuery(function ($) {
     $('.counter').countdown({
         until: tomorrow,
         layout: '<div class="counter-item"><b>{dnn}</b>{dl}</div><div class="counter-separator">:</div>' +
-        '<div class="counter-item"><b>{hnn}</b>{hl}</div><div class="counter-separator">:</div>' +
-        '<div class="counter-item"><b>{mnn}</b>{ml}</div><div class="counter-separator">:</div>' +
-        '<div class="counter-item"><b>{snn}</b>{sl}</div>'
+            '<div class="counter-item"><b>{hnn}</b>{hl}</div><div class="counter-separator">:</div>' +
+            '<div class="counter-item"><b>{mnn}</b>{ml}</div><div class="counter-separator">:</div>' +
+            '<div class="counter-item"><b>{snn}</b>{sl}</div>'
     });
 
     // ===================================================== spoiler
@@ -229,52 +219,50 @@ jQuery(function ($) {
 
     // ===================================================== swiper
 
-        var clientSlider = new Swiper('.client-slider', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-			pagination: {
-				el: '.client-pagination',
-				clickable: true,
-			  },
-            navigation: {
-				nextEl: '.client-next',
-				prevEl: '.client-prev',
-			  },
-            loop: true,
-            autoplay: {
-				delay: 5000,
-			  },
-			on: {
-				slideChange: function() {
-					$.ionSound.play('wuf-1');
-				}
-			}
-        });
+    var clientSlider = new Swiper('.client-slider', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+            el: '.client-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.client-next',
+            prevEl: '.client-prev',
+        },
+        loop: true,
+        autoplay: {
+            delay: 5000,
+        },
+        on: {
+            slideChange: function () {
 
-
-
-        var clientMobileSlider = new Swiper('.client-mobile-slider', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            pagination: {
-                el: '.client-mobile-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.client-next',
-                prevEl: '.client-prev',
-            },
-            loop: true,
-            autoplay: {
-                delay: 5000,
-            },
-            on: {
-                slideChange: function() {
-                    $.ionSound.play('wuf-1');
-                }
             }
-        });
+        }
+    });
 
+
+    var clientMobileSlider = new Swiper('.client-mobile-slider', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+            el: '.client-mobile-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.client-next',
+            prevEl: '.client-prev',
+        },
+        loop: true,
+        autoplay: {
+            delay: 5000,
+        },
+        on: {
+            slideChange: function () {
+
+            }
+        }
+    });
 
 
     // =====================================================dotdotdot
@@ -299,8 +287,7 @@ jQuery(function ($) {
     function headerBehaviour() {
         if ($(window).scrollTop() > 0) {
             $('.layout-header').addClass('active');
-        }
-        else {
+        } else {
             $('.layout-header').removeClass('active');
         }
     }
@@ -327,8 +314,7 @@ jQuery(function ($) {
             if (question.parents('.question-item').hasClass('active')) {
                 answer.slideUp();
                 item.removeClass('active');
-            }
-            else {
+            } else {
                 item.parents('.questions-block').find('.question-item').find('.answer').slideUp();
                 answer.slideDown();
                 item.parents('.questions-block').find('.question-item').removeClass('active');
@@ -398,6 +384,17 @@ jQuery(function ($) {
         closeGlobalNav(1200);
     });
 
+    var myHover = $('.list li');
+    var hoverBlock = $('.list li .hover-block');
+    myHover.mouseover(function () {
+        $(this).find('.hover-block').show();
+    }).mouseout(function () {
+        $(this).find('.hover-block').hide();
+    });
 
-    // jQuery('.scrollbar-inner').scrollbar();
+
+    $(".more-button").click(function () {
+        $(".more-block").toggle();
+    });
+
 });

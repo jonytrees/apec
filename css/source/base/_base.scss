@@ -8,51 +8,71 @@ html {
 	background-color: #211d1e;
 	font: 16px/24px 'Proba';
 	width: 100%;
-	min-width: 1110px;
+	min-width: 1070px;
 	max-width: 100%;
 	min-height: 100% !important;
 	position: relative;
 	overflow-x: auto !important;
 
+	@include small-desktop{
+		min-width: 1000px;
+	}
+
 	@include mobile{
-		min-width: 620px;
+		min-width: 375px;
 	}
 }
 
 body {
 	width: 100%;
-	min-width: 1110px;
+	min-width: 1070px;
 	max-width: 100%;
 	position: relative;
 	overflow: hidden;
 
+	@include small-desktop{
+		min-width: 1000px;
+	}
+
 	@include mobile{
-		min-width: 620px;
+		min-width: 375px;
 	}
 }
 
 //====================global container
 #global-wrapper {
 	overflow: hidden;
-	min-width: 1110px;
+	min-width: 1070px;
 	position: relative;
 
+	@include small-desktop{
+		min-width: 1000px;
+	}
+
 	@include mobile{
-		min-width: 620px;
+		min-width: 375px;
 	}
 }
 
 //====================container
 .container {
 	display: block;
-	width: 1110px;
+	width: 1070px;
 	padding: 0 15px;
 	margin: 0 auto;
 	position: relative;
 	z-index: 10;
 
+	@include small-desktop{
+		width: 1000px;
+	}
+
+	@include tablet{
+		padding: 0 5px;
+	}
+
 	@include mobile{
-		width: 620px;
+		width: 375px;
 		padding: 0 25px;
 	}
 }

@@ -870,7 +870,7 @@ iframe {
     box-shadow: 0 0 8px 6px #ecbc4d, 0 0 12px 14px #ecbc4d; }
   to {
     box-shadow: 0 0 18px 6px rgba(236, 188, 77, 0), 0 0 4px 71px rgba(236, 188, 77, 0); } }
-.si-button-pulse:hover, .btn-ghost:hover, .button-yellow:hover, .section-heading .button-yellow:hover, .section-business .under-button:hover {
+.si-button-pulse:hover, .btn-ghost:hover, .button-yellow:hover, .section-heading .button-yellow:hover, .section-business .under-button:hover, .section-question .more-button:hover {
   will-change: transform;
   transform: translate3d(0, 0, 0);
   -webkit-animation: si-button-pulse 0.8s 0s ease-out 1;
@@ -1877,43 +1877,58 @@ html {
   background-color: #211d1e;
   font: 16px/24px 'Proba';
   width: 100%;
-  min-width: 1110px;
+  min-width: 1070px;
   max-width: 100%;
   min-height: 100% !important;
   position: relative;
   overflow-x: auto !important; }
+  @media all and (max-width: 1610px) {
+    html {
+      min-width: 1000px; } }
   @media all and (max-width: 750px) {
     html {
-      min-width: 620px; } }
+      min-width: 375px; } }
 
 body {
   width: 100%;
-  min-width: 1110px;
+  min-width: 1070px;
   max-width: 100%;
   position: relative;
   overflow: hidden; }
+  @media all and (max-width: 1610px) {
+    body {
+      min-width: 1000px; } }
   @media all and (max-width: 750px) {
     body {
-      min-width: 620px; } }
+      min-width: 375px; } }
 
 #global-wrapper {
   overflow: hidden;
-  min-width: 1110px;
+  min-width: 1070px;
   position: relative; }
+  @media all and (max-width: 1610px) {
+    #global-wrapper {
+      min-width: 1000px; } }
   @media all and (max-width: 750px) {
     #global-wrapper {
-      min-width: 620px; } }
+      min-width: 375px; } }
 
 .container {
   display: block;
-  width: 1110px;
+  width: 1070px;
   padding: 0 15px;
   margin: 0 auto;
   position: relative;
   z-index: 10; }
+  @media all and (max-width: 1610px) {
+    .container {
+      width: 1000px; } }
+  @media all and (max-width: 1200px) {
+    .container {
+      padding: 0 5px; } }
   @media all and (max-width: 750px) {
     .container {
-      width: 620px;
+      width: 375px;
       padding: 0 25px; } }
 
 h1 {
@@ -2675,7 +2690,7 @@ textarea {
   .no-scroll .show-menu {
     color: #1c1b28 !important;
     top: 22px; }
-    @media all and (max-width: 1100px) {
+    @media all and (max-width: 1200px) {
       .no-scroll .show-menu {
         top: 17px;
         left: 10px;
@@ -2814,7 +2829,7 @@ textarea {
   -webkit-transform: translate3d(0, 0, 0); }
   #fp-nav.right {
     right: 8px; }
-    @media all and (max-width: 1280px) {
+    @media all and (max-width: 1610px) {
       #fp-nav.right {
         right: 4px; } }
 
@@ -2964,11 +2979,11 @@ textarea {
     display: inline-block;
     top: 47px;
     right: 65px;
-    width: 160px;
+    width: 161px;
     z-index: 150; }
-    @media all and (max-width: 1100px) {
+    @media all and (max-width: 1200px) {
       .layout-header .si-phone {
-        right: 25px; } }
+        right: 10px; } }
     @media all and (max-width: 750px) {
       .layout-header .si-phone {
         top: 75px;
@@ -3020,7 +3035,7 @@ textarea {
       list-style-type: none;
       display: inline-block;
       margin-right: 30px; }
-      @media all and (max-width: 1100px) {
+      @media all and (max-width: 1200px) {
         .layout-header .nav li {
           margin-right: 20px; } }
     .layout-header .nav a, .layout-header .nav .underline, .layout-header .nav .dashed, .layout-header .nav .dotted {
@@ -3049,6 +3064,9 @@ textarea {
     display: inline-block;
     width: 160px;
     position: relative; }
+    @media all and (max-width: 1200px) {
+      .layout-footer .si-phone {
+        right: 10px; } }
     .layout-footer .si-phone .circle-yellow {
       position: absolute;
       left: -52px;
@@ -3166,10 +3184,7 @@ html.si-lock2 {
   background-color: #e1e1e1;
   padding: 94px 96px 100px;
   width: 920px;
-  margin: 50px auto;
-  /*************** SCROLLBAR BASE CSS ***************/
-  /*************** SIMPLE INNER SCROLLBAR ***************/
-  /* update scrollbar offset if both scrolls are visible */ }
+  margin: 50px auto; }
   @media all and (max-width: 750px) {
     .si-modal, .si-success-modal {
       width: 95%;
@@ -3198,6 +3213,9 @@ html.si-lock2 {
   .si-modal.option-modal, .option-modal.si-success-modal {
     padding: 45px 0 0;
     height: 520px; }
+    @media all and (max-width: 750px) {
+      .si-modal.option-modal, .option-modal.si-success-modal {
+        height: 600px; } }
     .si-modal.option-modal .modal-form-title, .option-modal.si-success-modal .modal-form-title, .si-modal.option-modal .si-success-modal-title, .option-modal.si-success-modal .si-success-modal-title {
       display: block;
       color: #211d1e;
@@ -3253,6 +3271,9 @@ html.si-lock2 {
     height: 292px !important;
     width: 100%;
     overflow: auto; }
+    @media all and (max-width: 750px) {
+      .si-modal .nav-tabs, .si-success-modal .nav-tabs {
+        height: 371px !important; } }
     .si-modal .nav-tabs li, .si-success-modal .nav-tabs li {
       display: block !important;
       padding-top: 18px;
@@ -3288,115 +3309,15 @@ html.si-lock2 {
           opacity: 1; }
         .si-modal .nav-tabs li.active span, .si-success-modal .nav-tabs li.active span {
           font: 700 14px/14px 'Proba'; }
-  .si-modal .scroll-wrapper, .si-success-modal .scroll-wrapper {
-    overflow: hidden !important;
-    padding: 0 !important;
-    position: relative; }
-  .si-modal .scroll-wrapper > .scroll-content, .si-success-modal .scroll-wrapper > .scroll-content {
-    border: none !important;
-    box-sizing: content-box !important;
-    height: auto;
-    left: 0;
-    margin: 0;
-    max-height: none;
-    max-width: none !important;
-    overflow: scroll !important;
-    padding: 0;
-    position: relative !important;
-    top: 0;
-    width: auto !important; }
-  .si-modal .scroll-wrapper > .scroll-content::-webkit-scrollbar, .si-success-modal .scroll-wrapper > .scroll-content::-webkit-scrollbar {
-    height: 0;
-    width: 0; }
-  .si-modal .scroll-element, .si-success-modal .scroll-element {
-    display: block; }
-  .si-modal .scroll-element, .si-success-modal .scroll-element, .si-modal .scroll-element div, .si-success-modal .scroll-element div {
-    box-sizing: content-box; }
-  .si-modal .scroll-element.scroll-x.scroll-scrollx_visible, .si-success-modal .scroll-element.scroll-x.scroll-scrollx_visible,
-  .si-modal .scroll-element.scroll-y.scroll-scrolly_visible,
-  .si-success-modal .scroll-element.scroll-y.scroll-scrolly_visible {
-    display: block; }
-  .si-modal .scroll-element .scroll-bar, .si-success-modal .scroll-element .scroll-bar,
-  .si-modal .scroll-element .scroll-arrow,
-  .si-success-modal .scroll-element .scroll-arrow {
-    cursor: default; }
-  .si-modal .scroll-textarea, .si-success-modal .scroll-textarea {
-    border: 1px solid #000;
-    border-top-color: #999999; }
-  .si-modal .scroll-textarea > .scroll-content, .si-success-modal .scroll-textarea > .scroll-content {
-    overflow: hidden !important; }
-  .si-modal .scroll-textarea > .scroll-content > textarea, .si-success-modal .scroll-textarea > .scroll-content > textarea {
-    border: none !important;
-    box-sizing: border-box;
-    height: 100% !important;
-    margin: 0;
-    max-height: none !important;
-    max-width: none !important;
-    overflow: scroll !important;
-    outline: none;
-    padding: 2px;
-    position: relative !important;
-    top: 0;
-    width: 100% !important; }
-  .si-modal .scroll-textarea > .scroll-content > textarea::-webkit-scrollbar, .si-success-modal .scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {
-    height: 0;
-    width: 0; }
-  .si-modal .scrollbar-inner > .scroll-element, .si-success-modal .scrollbar-inner > .scroll-element,
-  .si-modal .scrollbar-inner > .scroll-element div,
-  .si-success-modal .scrollbar-inner > .scroll-element div {
-    border: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    z-index: 10; }
-  .si-modal .scrollbar-inner > .scroll-element div, .si-success-modal .scrollbar-inner > .scroll-element div {
-    display: block;
-    height: 100%;
-    left: 0;
-    top: 0;
-    width: 100%; }
-  .si-modal .scrollbar-inner > .scroll-element.scroll-x, .si-success-modal .scrollbar-inner > .scroll-element.scroll-x {
-    bottom: 2px;
-    height: 8px;
-    left: 0;
-    width: 100%; }
-  .si-modal .scrollbar-inner > .scroll-element.scroll-y, .si-success-modal .scrollbar-inner > .scroll-element.scroll-y {
-    height: 100%;
-    right: 2px;
-    top: 0;
-    width: 8px; }
-  .si-modal .scrollbar-inner > .scroll-element .scroll-element_outer, .si-success-modal .scrollbar-inner > .scroll-element .scroll-element_outer {
-    overflow: hidden; }
-  .si-modal .scrollbar-inner > .scroll-element .scroll-element_outer, .si-success-modal .scrollbar-inner > .scroll-element .scroll-element_outer,
-  .si-modal .scrollbar-inner > .scroll-element .scroll-element_track,
-  .si-success-modal .scrollbar-inner > .scroll-element .scroll-element_track,
-  .si-modal .scrollbar-inner > .scroll-element .scroll-bar,
-  .si-success-modal .scrollbar-inner > .scroll-element .scroll-bar {
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px; }
-  .si-modal .scrollbar-inner > .scroll-element .scroll-element_track, .si-success-modal .scrollbar-inner > .scroll-element .scroll-element_track,
-  .si-modal .scrollbar-inner > .scroll-element .scroll-bar,
-  .si-success-modal .scrollbar-inner > .scroll-element .scroll-bar {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-    filter: alpha(opacity=40);
-    opacity: 0.4; }
-  .si-modal .scrollbar-inner > .scroll-element .scroll-element_track, .si-success-modal .scrollbar-inner > .scroll-element .scroll-element_track {
-    background-color: #e0e0e0; }
-  .si-modal .scrollbar-inner > .scroll-element .scroll-bar, .si-success-modal .scrollbar-inner > .scroll-element .scroll-bar {
-    background-color: #c2c2c2; }
-  .si-modal .scrollbar-inner > .scroll-element:hover .scroll-bar, .si-success-modal .scrollbar-inner > .scroll-element:hover .scroll-bar {
-    background-color: #919191; }
-  .si-modal .scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar, .si-success-modal .scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar {
-    background-color: #919191; }
-  .si-modal .scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track, .si-success-modal .scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track {
-    left: -12px; }
-  .si-modal .scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track, .si-success-modal .scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track {
-    top: -12px; }
-  .si-modal .scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size, .si-success-modal .scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size {
-    left: -12px; }
-  .si-modal .scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size, .si-success-modal .scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
-    top: -12px; }
+  .si-modal .scrollbar-inner::-webkit-scrollbar, .si-success-modal .scrollbar-inner::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent; }
+  .si-modal ::-webkit-scrollbar-thumb, .si-success-modal ::-webkit-scrollbar-thumb {
+    width: 6px;
+    background: rgba(33, 29, 30, 0.8);
+    border-radius: 60px; }
+  .si-modal ::-webkit-scrollbar-track, .si-success-modal ::-webkit-scrollbar-track {
+    background-color: transparent; }
   .si-modal .tab-content, .si-success-modal .tab-content {
     padding-top: 25px;
     padding-left: 53px;
@@ -3590,7 +3511,7 @@ html.si-lock2 {
     top: 25%;
     right: 25%;
     z-index: 150; }
-    @media all and (max-width: 1100px) {
+    @media all and (max-width: 1200px) {
       .section-heading .abs-block {
         right: 15%; } }
     @media all and (max-width: 750px) {
@@ -3711,7 +3632,7 @@ html.si-lock2 {
       display: inline-block;
       width: 95px;
       height: 95px;
-      margin-right: 15px;
+      margin-right: 12px;
       position: relative;
       vertical-align: top;
       top: 0;
@@ -3752,12 +3673,17 @@ html.si-lock2 {
       vertical-align: top;
       margin-top: 20px;
       color: #e1e1e1;
-      font: 400 20px/25px 'Proba'; }
+      font: 400 20px/25px 'Proba';
+      float: right; }
       .section-heading .list-block .text.mobile {
         display: none; }
         @media all and (max-width: 750px) {
           .section-heading .list-block .text.mobile {
-            display: inline-block; } }
+            display: inline-block;
+            float: none; } }
+      @media all and (max-width: 1610px) {
+        .section-heading .list-block .text {
+          width: 200px; } }
       @media all and (max-width: 750px) {
         .section-heading .list-block .text {
           width: 78%;
@@ -3818,7 +3744,7 @@ html.si-lock2 {
     display: block;
     padding: 0;
     width: 96%;
-    margin-top: 1300px;
+    margin-top: 1200px;
     margin-left: 0;
     margin-right: 10px;
     list-style-type: none; }
@@ -3828,7 +3754,78 @@ html.si-lock2 {
     .section-world .list li {
       padding-top: 10px;
       padding-bottom: 10px;
-      border-bottom: 1px solid #333131; }
+      border-bottom: 1px solid #333131;
+      position: relative;
+      cursor: pointer; }
+      .section-world .list li .hover-block {
+        position: absolute;
+        width: 300px;
+        padding: 30px 10px;
+        bottom: 10px;
+        left: -325px;
+        color: #211d1e;
+        background-color: #e1e1e1;
+        text-align: center;
+        display: none;
+        z-index: 10; }
+        .section-world .list li .hover-block:after {
+          content: '';
+          width: 20px;
+          height: 20px;
+          background-color: #e1e1e1;
+          display: block;
+          transform: rotate(45deg);
+          bottom: 4px;
+          right: -10px;
+          position: absolute; }
+        .section-world .list li .hover-block.right, .section-world .list li .hover-block.left, .section-world .list li .hover-block.center {
+          left: 265px; }
+          @media all and (max-width: 1820px) {
+            .section-world .list li .hover-block.right, .section-world .list li .hover-block.left, .section-world .list li .hover-block.center {
+              left: 195px; } }
+          @media all and (max-width: 1610px) {
+            .section-world .list li .hover-block.right, .section-world .list li .hover-block.left, .section-world .list li .hover-block.center {
+              left: -80px;
+              bottom: 70px; } }
+  @media all and (max-width: 1610px) and (max-width: 1610px) {
+    .section-world .list li .hover-block.right:after, .section-world .list li .hover-block.left:after, .section-world .list li .hover-block.center:after {
+      bottom: -4px;
+      left: 45%; } }
+
+          .section-world .list li .hover-block.right:after, .section-world .list li .hover-block.left:after, .section-world .list li .hover-block.center:after {
+            right: 290px; }
+        @media all and (max-width: 1610px) {
+          .section-world .list li .hover-block.left {
+            left: 20px;
+            bottom: 70px; } }
+  @media all and (max-width: 1610px) and (max-width: 1610px) {
+    .section-world .list li .hover-block.left:after {
+      bottom: -4px;
+      left: 15%; } }
+
+        @media all and (max-width: 1610px) {
+          .section-world .list li .hover-block.center {
+            left: -80px;
+            bottom: 70px; } }
+  @media all and (max-width: 1610px) and (max-width: 1610px) {
+    .section-world .list li .hover-block.center:after {
+      bottom: -4px;
+      left: 45%; } }
+
+        .section-world .list li .hover-block .title {
+          font: 700 22px/25px 'Proba';
+          display: block;
+          margin-bottom: 20px; }
+        .section-world .list li .hover-block .sub_title {
+          font: 700 18px/25px 'Proba'; }
+        .section-world .list li .hover-block .line-grey {
+          width: 100%;
+          height: 1px;
+          background-color: #cacaca;
+          margin-top: 20px;
+          margin-bottom: 20px; }
+        .section-world .list li .hover-block .text {
+          font: 400 16px/23px 'Proba'; }
       .section-world .list li:nth-child(5) {
         border-bottom: none; }
         @media all and (max-width: 750px) {
@@ -3895,7 +3892,7 @@ html.si-lock2 {
         position: absolute;
         left: 0;
         top: -155px; }
-      @media all and (max-width: 1100px) {
+      @media all and (max-width: 1200px) {
         .section-world .what-wrapper .visa {
           right: -130px; } }
       @media all and (max-width: 750px) {
@@ -3987,7 +3984,7 @@ html.si-lock2 {
           -o-transform: rotate(180deg);
           transform: rotate(180deg); }
       .section-world .what-wrapper .warning-block .link {
-        width: 340px;
+        width: 345px;
         display: inline-block;
         vertical-align: top;
         margin-top: 4px;
@@ -4135,43 +4132,47 @@ html.si-lock2 {
         .section-business .yellow .business-block {
           width: 95%;
           margin: 0 auto; } }
-    .section-business .yellow.i-1 .business-block {
-      width: 750px;
-      display: flex;
-      justify-content: space-between;
-      margin: 0 auto; }
-      @media all and (max-width: 750px) {
-        .section-business .yellow.i-1 .business-block {
-          width: 95%; } }
-    .section-business .yellow.i-1 .number {
-      width: 40px;
-      display: inline-block;
-      font: 700 80px/80px 'Proba';
-      text-transform: uppercase; }
-    .section-business .yellow.i-1 .years {
-      width: 75px;
-      display: inline-block;
-      font: 700 16px/16px 'Proba';
-      text-transform: uppercase;
-      margin-top: 47px; }
-      @media all and (max-width: 750px) {
-        .section-business .yellow.i-1 .years {
-          margin-top: 0; } }
-    .section-business .yellow.i-1 .text {
-      font: 700 40px/40px 'Proba';
-      text-transform: uppercase;
-      display: inline-block;
-      width: 460px;
-      margin-top: 25px; }
-      @media all and (max-width: 750px) {
-        .section-business .yellow.i-1 .text {
-          width: 76%;
-          margin-top: 15px; } }
-      .section-business .yellow.i-1 .text.last {
-        margin-top: -10px; }
+    .section-business .yellow.i-1 {
+      padding-top: 60px; }
+      .section-business .yellow.i-1 .business-block {
+        width: 750px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto; }
         @media all and (max-width: 750px) {
-          .section-business .yellow.i-1 .text.last {
-            margin-top: 10px; } }
+          .section-business .yellow.i-1 .business-block {
+            width: 95%; } }
+      .section-business .yellow.i-1 .number {
+        width: 40px;
+        display: inline-block;
+        font: 700 80px/80px 'Proba';
+        text-transform: uppercase; }
+      .section-business .yellow.i-1 .years {
+        width: 75px;
+        display: inline-block;
+        font: 700 16px/16px 'Proba';
+        text-transform: uppercase;
+        margin-top: 47px; }
+        @media all and (max-width: 750px) {
+          .section-business .yellow.i-1 .years {
+            margin-top: 0; } }
+      .section-business .yellow.i-1 .text {
+        font: 700 40px/40px 'Proba';
+        text-transform: uppercase;
+        display: inline-block;
+        width: 460px;
+        margin-top: 25px; }
+        @media all and (max-width: 750px) {
+          .section-business .yellow.i-1 .text {
+            width: 76%;
+            margin-top: 15px; } }
+        .section-business .yellow.i-1 .text.last {
+          margin-top: -10px; }
+          @media all and (max-width: 750px) {
+            .section-business .yellow.i-1 .text.last {
+              margin-top: 10px; } }
+    .section-business .yellow.i-1-1 {
+      padding-top: 35px; }
     .section-business .yellow:hover {
       -webkit-transition: all 0.3s ease-in-out;
       -moz-transition: all 0.3s ease-in-out;
@@ -4220,6 +4221,9 @@ html.si-lock2 {
       width: 655px;
       display: inline-block;
       float: right; }
+      @media all and (max-width: 1610px) {
+        .section-business .last-wrapper .right-block {
+          width: 590px; } }
       @media all and (max-width: 750px) {
         .section-business .last-wrapper .right-block {
           display: block;
@@ -4230,6 +4234,9 @@ html.si-lock2 {
         display: block;
         margin-bottom: 45px;
         position: relative; }
+        @media all and (max-width: 1200px) {
+          .section-business .last-wrapper .right-block .block_sub {
+            padding-right: 20px; } }
         .section-business .last-wrapper .right-block .block_sub:after {
           content: '+';
           display: block;
@@ -4461,10 +4468,14 @@ html.si-lock2 {
     .section-client .wrapper-client-slider .button-block,
     .section-client .wrapper-client-mobile-slider .button-block {
       position: absolute;
-      top: 820px;
+      top: 880px;
       right: 95px;
       width: 160px;
       height: 13px; }
+      @media all and (max-width: 1610px) {
+        .section-client .wrapper-client-slider .button-block,
+        .section-client .wrapper-client-mobile-slider .button-block {
+          top: 940px; } }
       @media all and (max-width: 750px) {
         .section-client .wrapper-client-slider .button-block,
         .section-client .wrapper-client-mobile-slider .button-block {
@@ -4516,9 +4527,12 @@ html.si-lock2 {
         display: block; } }
 
 .section-travel {
-  padding-top: 274px;
+  padding-top: 174px;
   background: fixed url("../images/travel-fon.jpg") 100% 1% no-repeat; }
-  @media all and (max-width: 1100px) {
+  @media all and (max-width: 1610px) {
+    .section-travel {
+      background: fixed url("../images/travel-fon.jpg") 100% -2% no-repeat; } }
+  @media all and (max-width: 1200px) {
     .section-travel {
       background: fixed url("../images/travel-fon.jpg") 100% 2% no-repeat; } }
   @media all and (max-width: 750px) {
@@ -4574,7 +4588,7 @@ html.si-lock2 {
       font: 400 22px/22px 'Proba';
       margin-bottom: 30px; }
   .section-travel .button-yellow {
-    margin-bottom: 250px;
+    margin-bottom: 100px;
     display: block; }
     @media all and (max-width: 750px) {
       .section-travel .button-yellow {
@@ -4601,12 +4615,15 @@ html.si-lock2 {
       .section-get h2 {
         margin-bottom: 80px; } }
   .section-get .sub-text {
-    width: 440px;
+    width: 430px;
     display: inline-block;
     float: right;
     color: #e1e1e1;
     font: 400 22px/30px 'Proba';
     margin-top: 32px; }
+    @media all and (max-width: 1610px) {
+      .section-get .sub-text {
+        width: 353px; } }
     @media all and (max-width: 750px) {
       .section-get .sub-text {
         display: none; } }
@@ -4655,6 +4672,8 @@ html.si-lock2 {
     font: 400 18px/30px 'Proba';
     display: block;
     margin-bottom: 35px; }
+    .section-get .text.i-1 {
+      width: 85%; }
   .section-get .link-yellow {
     width: 235px;
     color: #ecbc4d;
@@ -4667,7 +4686,7 @@ html.si-lock2 {
       border: none; }
 
 .section-question {
-  padding-top: 160px;
+  padding-top: 60px;
   padding-bottom: 200px; }
   @media all and (max-width: 750px) {
     .section-question {
@@ -4682,7 +4701,8 @@ html.si-lock2 {
   .section-question .questions-block {
     width: 100%; }
     .section-question .questions-block .question-item {
-      width: 100%; }
+      width: 100%;
+      cursor: pointer; }
       .section-question .questions-block .question-item .question {
         padding-top: 65px;
         padding-bottom: 75px;
@@ -4690,6 +4710,9 @@ html.si-lock2 {
         border-top: 1px solid #383334;
         border-bottom: 1px solid #383334;
         position: relative; }
+        @media all and (max-width: 1610px) {
+          .section-question .questions-block .question-item .question {
+            padding-left: 45px; } }
         @media all and (max-width: 750px) {
           .section-question .questions-block .question-item .question {
             padding-left: 30px;
@@ -4716,17 +4739,19 @@ html.si-lock2 {
           border-radius: 100%;
           position: absolute;
           top: 35%;
-          right: 100px;
+          right: 85px;
           text-align: center; }
+          @media all and (max-width: 1610px) {
+            .section-question .questions-block .question-item .question .question-arrow-holder {
+              right: 45px; } }
           @media all and (max-width: 750px) {
             .section-question .questions-block .question-item .question .question-arrow-holder {
               right: 30px; } }
           .section-question .questions-block .question-item .question .question-arrow-holder .plus {
             color: #e1e1e1;
-            font-size: 65px;
-            line-height: 29px;
+            font: 400 60px/53px 'Proba';
             width: 28px;
-            height: 24px;
+            height: 60px;
             position: absolute !important;
             top: 0;
             left: 0;
@@ -4781,6 +4806,26 @@ html.si-lock2 {
         border: 1px solid #211d1e; }
         .section-question .questions-block .question-item.active .question-arrow-holder .plus {
           color: #211d1e; }
+  .section-question .more-button {
+    width: 255px;
+    height: 80px;
+    background-color: #ecbc4d;
+    text-align: center;
+    color: #211d1e;
+    font: 400 22px/80px 'Proba';
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 50px auto;
+    display: block; }
+    .section-question .more-button:hover {
+      color: #ffffff;
+      border: 1px solid #ecbc4d;
+      background-color: #211d1e; }
+  .section-question .more-block {
+    display: none; }
+    .section-question .more-block .question-item:nth-child(1) {
+      border-top: 1px solid #383334; }
 
 .section-form {
   background-color: #e1e1e1;
@@ -4816,7 +4861,12 @@ html.si-lock2 {
     width: 717px;
     height: 807px;
     bottom: -240px;
-    right: -100px; }
+    right: -150px; }
+    @media all and (max-width: 1610px) {
+      .section-form .man {
+        width: 625px;
+        height: 722px;
+        right: -50px; } }
     @media all and (max-width: 750px) {
       .section-form .man {
         display: none; } }

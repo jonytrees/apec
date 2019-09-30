@@ -17,6 +17,10 @@
 		width: 160px;
 		position: relative;
 
+		@include tablet{
+			right: 10px;
+		}
+
 		&:hover{
 			.circle-yellow{
 				@extend .buzz-out;

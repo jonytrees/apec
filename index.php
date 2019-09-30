@@ -1,14 +1,14 @@
 <?php
 //Две строчки ниже для защиты форм от спам-ботов
 session_start();
-$_SESSION['sf_key'] = md5(substr( session_id(), mt_rand(0,10), mt_rand(3,10) ) . time() ); 
+$_SESSION['sf_key'] = md5(substr(session_id(), mt_rand(0, 10), mt_rand(3, 10)) . time());
 
 header('Content-Type: text/html; charset=utf-8');
 header('X-UA-Compatible: IE=edge');
 include 'functions.php';
 
 $title = 'APEC';
-$desc = 'Выдача карт АТЭС для граждан России';
+$desc = 'Выдача карт АТЭС';
 $url = SI_CurrentPageURL();
 $image = SI_CurrentPageImage();
 
@@ -26,7 +26,7 @@ $image = SI_CurrentPageImage();
     <meta name="format-detection" content="telephone=no">
     <meta name="cmsmagazine" content="2f345f737ed0d95e9259d18f5edc8cd7">
     <meta name="tagline" content="http://hello-brand.ru/">
-
+    <meta name="Keywords" content="Выдача карт АТЭС">
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -52,7 +52,31 @@ $image = SI_CurrentPageImage();
     <!-- Page title -->
     <title><?php echo $title; ?> | <?php echo $desc; ?></title>
 
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
+        ym(55513930, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/55513930" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148958176-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-148958176-1');
+    </script>
 </head>
 
 
@@ -82,7 +106,7 @@ $image = SI_CurrentPageImage();
                             </a>
                         </li>
                         <li>
-                            <a class="si-jump" href="#diploma">
+                            <a class="si-jump" href="#world">
                                 Где можно использовать?
                             </a>
                         </li>
@@ -111,7 +135,7 @@ $image = SI_CurrentPageImage();
                 </div>
             </div>
             <a href="tel:+79450000000" class="phone-link dark">8 945 000-00-00</a>
-            <a href="#" class="open-consult-modal consult" data-extra="1">Заказать консультацию</a>
+            <a href="#" class="open-consult-modal consult" onclick="yaCounter55513930.reachGoal('target1');" data-extra="1">Заказать консультацию</a>
         </div>
 
     </header>
@@ -146,7 +170,8 @@ $image = SI_CurrentPageImage();
                 оформить карту АТЭС
             </div>
 
-            <a href="#" class="btn open-consult-modal button-yellow" data-extra="1">
+            <a href="#" class="btn open-consult-modal button-yellow" onclick="yaCounter55513930.reachGoal('target2');
+" data-extra="1">
                 Узнайте больше
             </a>
 
@@ -248,6 +273,18 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Россия
                             </span>
+                            <div class="hover-block left">
+                                <div class="title">
+                                    Россия
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Паспортный контроль без очереди по дипломатическому коридору.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -256,6 +293,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Китай
                             </span>
+                            <div class="hover-block left">
+                                <div class="title">
+                                    Китай
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -264,6 +314,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Южная Корея
                             </span>
+                            <div class="hover-block left">
+                                <div class="title">
+                                    Южная Корея
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -272,6 +335,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Япония
                             </span>
+                            <div class="hover-block left">
+                                <div class="title">
+                                    Япония
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -280,6 +356,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Гонконг, Китай
                             </span>
+                            <div class="hover-block left">
+                                <div class="title">
+                                    Гонконг, Китай
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -292,6 +381,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Тайвань
                             </span>
+                            <div class="hover-block center">
+                                <div class="title">
+                                    Тайвань
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -300,6 +402,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Тайланд
                             </span>
+                            <div class="hover-block center">
+                                <div class="title">
+                                    Тайланд
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -308,6 +423,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Вьетнам
                             </span>
+                            <div class="hover-block center">
+                                <div class="title">
+                                    Вьетнам
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -316,6 +444,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Филиппины
                             </span>
+                            <div class="hover-block center">
+                                <div class="title">
+                                    Филиппины
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 59 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -324,6 +465,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Малайзия
                             </span>
+                            <div class="hover-block center">
+                                <div class="title">
+                                    Малайзия
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -336,6 +490,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Сингапур
                             </span>
+                            <div class="hover-block center">
+                                <div class="title">
+                                    Сингапур
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -344,6 +511,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Бруней
                             </span>
+                            <div class="hover-block center">
+                                <div class="title">
+                                    Бруней
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -352,6 +532,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Индонезия
                             </span>
+                            <div class="hover-block center">
+                                <div class="title">
+                                    Индонезия
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -360,6 +553,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Папуа-Новая Гвинея
                             </span>
+                            <div class="hover-block center">
+                                <div class="title">
+                                    Папуа-Новая Гвинея
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -368,6 +574,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Австралия
                             </span>
+                            <div class="hover-block center">
+                                <div class="title">
+                                    Австралия
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -380,6 +599,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Новая Зеландия
                             </span>
+                            <div class="hover-block right">
+                                <div class="title">
+                                    Новая Зеландия
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow under">
@@ -388,6 +620,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Канада
                             </span>
+                            <div class="hover-block right">
+                                <div class="title">
+                                    Канада
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Требуется виза. Паспортный контроль без очереди по дипломатическому коридору с
+                                    пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow under">
@@ -396,6 +641,20 @@ $image = SI_CurrentPageImage();
                             <span>
                                 США
                             </span>
+                            <div class="hover-block right">
+                                <div class="title">
+                                    США
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Требуется виза. Для владельцев карт возможна ускоренная запись на визовое
+                                    собеседование. Паспортный контроль без очереди по дипломатическому коридору с
+                                    пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -404,6 +663,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Мексика
                             </span>
+                            <div class="hover-block right">
+                                <div class="title">
+                                    Мексика
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li class="border-bottom">
                             <div class="circle-yellow">
@@ -412,6 +684,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Перу
                             </span>
+                            <div class="hover-block right">
+                                <div class="title">
+                                    Перу
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li class="border-none">
                             <div class="circle-yellow">
@@ -420,6 +705,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Чили
                             </span>
+                            <div class="hover-block right">
+                                <div class="title">
+                                    Чили
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -435,6 +733,18 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Россия
                             </span>
+                            <div class="hover-block left">
+                                <div class="title">
+                                    Россия
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Паспортный контроль без очереди по дипломатическому коридору.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -443,6 +753,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Китай
                             </span>
+                            <div class="hover-block left">
+                                <div class="title">
+                                    Китай
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -451,6 +774,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Южная Корея
                             </span>
+                            <div class="hover-block left">
+                                <div class="title">
+                                    Южная Корея
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -459,6 +795,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Япония
                             </span>
+                            <div class="hover-block left">
+                                <div class="title">
+                                    Япония
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -467,6 +816,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Гонконг, Китай
                             </span>
+                            <div class="hover-block left">
+                                <div class="title">
+                                    Гонконг, Китай
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -475,6 +837,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Тайвань
                             </span>
+                            <div class="hover-block left">
+                                <div class="title">
+                                    Тайвань
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -483,6 +858,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Тайланд
                             </span>
+                            <div class="hover-block left">
+                                <div class="title">
+                                    Тайланд
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -491,6 +879,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Вьетнам
                             </span>
+                            <div class="hover-block left">
+                                <div class="title">
+                                    Вьетнам
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -499,6 +900,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Филиппины
                             </span>
+                            <div class="hover-block left">
+                                <div class="title">
+                                    Филиппины
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 59 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -507,6 +921,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Малайзия
                             </span>
+                            <div class="hover-block left">
+                                <div class="title">
+                                    Малайзия
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -520,6 +947,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Сингапур
                             </span>
+                            <div class="hover-block right">
+                                <div class="title">
+                                    Сингапур
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -528,6 +968,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Бруней
                             </span>
+                            <div class="hover-block right">
+                                <div class="title">
+                                    Бруней
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -536,6 +989,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Индонезия
                             </span>
+                            <div class="hover-block right">
+                                <div class="title">
+                                    Индонезия
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -544,6 +1010,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Папуа-Новая Гвинея
                             </span>
+                            <div class="hover-block right">
+                                <div class="title">
+                                    Папуа-Новая Гвинея
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -552,6 +1031,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Австралия
                             </span>
+                            <div class="hover-block right">
+                                <div class="title">
+                                    Австралия
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -560,6 +1052,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Новая Зеландия
                             </span>
+                            <div class="hover-block right">
+                                <div class="title">
+                                    Новая Зеландия
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow under">
@@ -568,6 +1073,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Канада
                             </span>
+                            <div class="hover-block right">
+                                <div class="title">
+                                    Канада
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Требуется виза. Паспортный контроль без очереди по дипломатическому коридору с
+                                    пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow under">
@@ -576,6 +1094,20 @@ $image = SI_CurrentPageImage();
                             <span>
                                 США
                             </span>
+                            <div class="hover-block right">
+                                <div class="title">
+                                    США
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Требуется виза. Для владельцев карт возможна ускоренная запись на визовое
+                                    собеседование. Паспортный контроль без очереди по дипломатическому коридору с
+                                    пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <div class="circle-yellow">
@@ -584,6 +1116,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Мексика
                             </span>
+                            <div class="hover-block right">
+                                <div class="title">
+                                    Мексика
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li class="border-bottom">
                             <div class="circle-yellow">
@@ -592,6 +1137,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Перу
                             </span>
+                            <div class="hover-block right">
+                                <div class="title">
+                                    Перу
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                         <li class="border-none">
                             <div class="circle-yellow">
@@ -600,6 +1158,19 @@ $image = SI_CurrentPageImage();
                             <span>
                                 Чили
                             </span>
+                            <div class="hover-block right">
+                                <div class="title">
+                                    Чили
+                                </div>
+                                <div class="sub_title">
+                                    Коридор въезда по карте APEC
+                                </div>
+                                <div class="line-grey"></div>
+                                <div class="text">
+                                    Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по
+                                    дипломатическому коридору с пометкой APEC Card.
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -634,7 +1205,7 @@ $image = SI_CurrentPageImage();
                 <p class="text">
                     Карта АТЭС является аналогом дипломатического паспорта для предпринимателей
                     и топ-менеджеров компаний. Она идеально подходит для регулярных деловых поездок,
-                    а также продолжительного проживания зарубежом без поездок в Россию и оформления виз.
+                    а также продолжительного проживания без поездок в Россию и оформления виз.
                 </p>
 
                 <p class="border-box">
@@ -647,7 +1218,8 @@ $image = SI_CurrentPageImage();
                     <div class="circle-yellow">
                         <span>!</span>
                     </div>
-                    <a href="postanovlenie.pdf" target="_blank" class="link">Постановления Правительства РФ о картах АТЭС</a>
+                    <a href="postanovlenie.pdf" target="_blank" class="link">Постановления Правительства РФ о картах
+                        АТЭС</a>
                 </div>
             </div>
         </div>
@@ -659,18 +1231,20 @@ $image = SI_CurrentPageImage();
         <div class="container">
             <h3>
                 Не нужно быть крупным бизнесменом,
-                чтобы получить привелегии карты АТЭС
+                чтобы получить привилегии карты АТЭС
             </h3>
 
             <div class="sub_title">
-                Карту может получить владелец или топ-менеджер любой российской компании, сотрудничающей с зарубежными странами.
+                Карту может получить владелец или топ-менеджер любой российской компании, сотрудничающей с зарубежными
+                странами.
             </div>
-            <a href="#" class="btn open-consult-modal under-button" data-extra="2">
+            <a href="#" class="btn open-consult-modal under-button" onclick="yaCounter55513930.reachGoal('target3');
+" data-extra="2">
                 <span>Узнайте о порядке оформления</span>
             </a>
 
             <div class="hidden-xs">
-                <div class="yellow i-1">
+                <div class="yellow i-1 i-1-1">
                     <div class="business-block">
                         <div class="number">
                             5
@@ -692,11 +1266,11 @@ $image = SI_CurrentPageImage();
                         <div class="number">
                             2-3
                             <div class="years visible-xs">
-                                месяцеа
+                                месяца
                             </div>
                         </div>
                         <div class="years hidden-xs">
-                            месяцеа
+                            месяца
                         </div>
                         <div class="text">
                             срок непрерывного<br>
@@ -710,11 +1284,11 @@ $image = SI_CurrentPageImage();
                         <div class="number">
                             3
                             <div class="years visible-xs">
-                                месяцеа
+                                месяца
                             </div>
                         </div>
                         <div class="years hidden-xs">
-                            месяцеа
+                            месяца
                         </div>
                         <div class="text last">
                             для оформления<br>
@@ -737,7 +1311,8 @@ $image = SI_CurrentPageImage();
                         </div>
                         <div class="text">
                             Проходите паспортно-визовый контроль в 21 стране Азии, Австралии,
-                            Новой Зеландии, Южной Америке, а также Канаде и США без очереди через дипломатический коридор.
+                            Новой Зеландии, Южной Америке, а также Канаде и США без очереди через дипломатический
+                            коридор.
                         </div>
                     </div>
 
@@ -748,7 +1323,7 @@ $image = SI_CurrentPageImage();
                         </div>
                         <div class="text">
                             Владельцы карты могут записаться на собеседование для получения визы США
-                            в привелигированном порядке и без очереди.
+                            в привилегированном порядке и без очереди.
                         </div>
                     </div>
                 </div>
@@ -778,11 +1353,11 @@ $image = SI_CurrentPageImage();
                     <div class="number">
                         2-3
                         <div class="years visible-xs">
-                            месяцеа
+                            месяца
                         </div>
                     </div>
                     <div class="years hidden-xs">
-                        месяцеа
+                        месяца
                     </div>
                     <div class="text">
                         срок непрерывного<br>
@@ -796,11 +1371,11 @@ $image = SI_CurrentPageImage();
                     <div class="number">
                         3
                         <div class="years visible-xs">
-                            месяцеа
+                            месяца
                         </div>
                     </div>
                     <div class="years hidden-xs">
-                        месяцеа
+                        месяца
                     </div>
                     <div class="text last">
                         для оформления<br>
@@ -824,7 +1399,8 @@ $image = SI_CurrentPageImage();
                         </div>
                         <div class="text">
                             Проходите паспортно-визовый контроль в 21 стране Азии, Австралии,
-                            Новой Зеландии, Южной Америке, а также Канаде и США без очереди через дипломатический коридор.
+                            Новой Зеландии, Южной Америке, а также Канаде и США без очереди через дипломатический
+                            коридор.
                         </div>
                     </div>
 
@@ -1275,34 +1851,36 @@ $image = SI_CurrentPageImage();
     <!--===================================================== section travel -->
     <section class="section-travel" id="travel">
         <div class="container">
-           <div class="row">
-               <div class="col-1-6 col-xs-1">
-                   <div class="empty-block"></div>
-               </div>
-               <div class="col-5-6 col-xs-1">
-                   <div class="warning-block pulse">
-                       <span>!</span>
-                   </div>
+            <div class="row">
+                <div class="col-1-6 col-xs-1">
+                    <div class="empty-block"></div>
+                </div>
+                <div class="col-5-6 col-xs-1">
+                    <div class="warning-block pulse">
+                        <span>!</span>
+                    </div>
 
-                   <div class="white-text cre-animate" data-animation="slide-in-from-left"
-                        data-speed="1000" data-delay="300" data-offset="90%" data-easing="easeOut">
-                       Каждый год визовые требования ужесточаются. Зачастую многократную визу в Китай получить почти невозможно.
-                   </div>
+                    <div class="white-text cre-animate" data-animation="slide-in-from-left"
+                         data-speed="1000" data-delay="300" data-offset="90%" data-easing="easeOut">
+                        Каждый год визовые требования ужесточаются. Зачастую многократную визу в Китай получить почти
+                        невозможно.
+                    </div>
 
-                   <h2 class="cre-animate" data-animation="slide-in-from-right"
-                       data-speed="1000" data-delay="600" data-offset="90%" data-easing="easeOut">
+                    <h2 class="cre-animate" data-animation="slide-in-from-right"
+                        data-speed="1000" data-delay="600" data-offset="90%" data-easing="easeOut">
                        <span>
                            Станьте владельцем карты АТЭС.
                        </span>
-                       Путешествуйте,<br> работайте и живите<br>
-                       зарубежом свободно.
-                   </h2>
+                        Путешествуйте,<br> работайте и живите<br>
+                        зарубежом свободно.
+                    </h2>
 
-                   <a href="#" class="btn open-consult-modal button-yellow" data-extra="3">
-                       Узнайте больше
-                   </a>
-               </div>
-           </div>
+                    <a href="#" class="btn open-consult-modal button-yellow" onclick="yaCounter55513930.reachGoal
+                    ('target4');" data-extra="3">
+                        Узнайте больше
+                    </a>
+                </div>
+            </div>
         </div>
         <div id="get"></div>
     </section>
@@ -1316,7 +1894,7 @@ $image = SI_CurrentPageImage();
             </h2>
             <div class="sub-text">
                 Получить карту может <span>любой гражданин России старше 20 лет</span>.<Br>
-                От  вас потребуется только паспорт и справка с места работы.
+                От вас потребуется только паспорт и справка с места работы.
             </div>
 
             <div class="triangle">
@@ -1337,7 +1915,8 @@ $image = SI_CurrentPageImage();
                         по номеру: 8 495 000-00-00
                     </div>
 
-                    <a href="#" class="btn open-consult-modal button-yellow">
+                    <a href="#" class="btn open-consult-modal button-yellow" onclick="yaCounter55513930.reachGoal
+                    ('target5');" data-extra="4">
                         Оставить заявку
                     </a>
                 </div>
@@ -1355,27 +1934,9 @@ $image = SI_CurrentPageImage();
                     </div>
                 </div>
                 <div class="col-1-3 cre-animate" data-animation="slide-in-from-left"
-                     data-speed="1000" data-delay="900" data-offset="90%" data-easing="easeOut">
-                    <div class="number">
-                        3<span>.</span>
-                    </div>
-                    <div class="title">
-                        Взаимодействие
-                        с МИД 21 страны-
-                        участницы АТЭС без вашего участия
-                    </div>
-                    <div class="text">
-                        Мы отправляем документы в МИД каждой страны-участницы АТЭС
-                        и держим вас в курсе о статусе.
-                    </div>
-                </div>
-            </div>
-            <div class="row hidden-xs margin-top">
-                <div class="line"></div>
-                <div class="col-1-3 cre-animate" data-animation="slide-in-from-left"
                      data-speed="1000" data-delay="1200" data-offset="90%" data-easing="easeOut">
                     <div class="number">
-                        4<span>.</span>
+                        3<span>.</span>
                     </div>
                     <div class="title">
                         Ваши документы<br> для выпуска карты
@@ -1385,9 +1946,25 @@ $image = SI_CurrentPageImage();
                         и подаём их в МИД страны-участницы АТЭС.
                     </div>
 
-                    <a href="#" class="link-yellow">
+                    <a href="documents.zip" class="link-yellow" download>
                         Полный перечень документов
                     </a>
+                </div>
+            </div>
+            <div class="row hidden-xs margin-top">
+                <div class="line"></div>
+                <div class="col-1-3 cre-animate" data-animation="slide-in-from-left"
+                     data-speed="1000" data-delay="900" data-offset="90%" data-easing="easeOut">
+                    <div class="number">
+                        4<span>.</span>
+                    </div>
+                    <div class="title">
+                        Взаимодействие с МИД 21 страны
+                    </div>
+                    <div class="text i-1">
+                        Мы отправляем документы в МИД каждой страны АТЭС без вашего участия и держим вас в курсе о
+                        статусе.
+                    </div>
                 </div>
                 <div class="col-1-3 cre-animate" data-animation="slide-in-from-left"
                      data-speed="1000" data-delay="1500" data-offset="90%" data-easing="easeOut">
@@ -1454,6 +2031,22 @@ $image = SI_CurrentPageImage();
                         3<span>.</span>
                     </div>
                     <div class="title">
+                        Ваши документы<br> для выпуска карты
+                    </div>
+                    <div class="text">
+                        Мы готовим ваш пакет документов<br>
+                        и подаём их в МИД страны-участницы АТЭС.
+                    </div>
+
+                    <a href="documents.zip" class="link-yellow" download>
+                        Полный перечень документов
+                    </a>
+                </div>
+                <div class="col-xs-1-2">
+                    <div class="number">
+                        4<span>.</span>
+                    </div>
+                    <div class="title">
                         Взаимодействие
                         с МИД 21 страны-
                         участницы АТЭС без вашего участия
@@ -1462,22 +2055,6 @@ $image = SI_CurrentPageImage();
                         Мы отправляем документы в МИД каждой страны-участницы АТЭС
                         и держим вас в курсе о статусе.
                     </div>
-                </div>
-                <div class="col-xs-1-2">
-                    <div class="number">
-                        4<span>.</span>
-                    </div>
-                    <div class="title">
-                        Ваши документы<br> для выпуска карты
-                    </div>
-                    <div class="text">
-                        Мы готовим ваш пакет документов<br>
-                        и подаём их в МИД страны-участницы АТЭС.
-                    </div>
-
-                    <a href="#" class="link-yellow">
-                        Полный перечень документов
-                    </a>
                 </div>
             </div>
             <div class="row visible-xs margin-top-last">
@@ -1525,14 +2102,17 @@ $image = SI_CurrentPageImage();
                         </div>
 
                         <div class="question-text">
-                            Выпускают ли карты АТЭС в других <br> странах-участницах  организации<br> «Азиатско-тихоокеанское сотрудничество»?
+                            КАК ОФОРМЛЯЕТСЯ КАРТА?
                         </div>
 
                     </div>
 
                     <div class="answer">
                         <p>
-                            Да, выпуск карт АТЭС - очень востребованная и распространённая практика. Сейчас в России наиболее мягкие требования для получения карты АТЭС.
+                            Карта оформляется через МИД России и остальных стран, входящих в соглашение. Документы на
+                            каждого кандидата направляются во все страны АТЭС, указанные в заявке, рассматриваются в
+                            индивидуальном порядке, и после того, как поступают положительные решения от всех стран, МИД
+                            России выпускает готовую карту. Весь процесс занимает в среднем 3-6 месяцев.
                         </p>
                     </div>
                 </div>
@@ -1544,15 +2124,17 @@ $image = SI_CurrentPageImage();
                             <div class="plus">+</div>
                         </div>
                         <div class="question-text">
-                            Возможно ли получить карту, если я живу не в России или не в Москве?
+                            КАКОВЫ ГАРАНТИИ, ЧТО МНЕ ВЫДАДУТ КАРТУ ИЛИ ВЕРНУТ ДЕНЬГИ?
                         </div>
 
                     </div>
 
                     <div class="answer">
                         <p>
-                            Да, это возможно. Вам не нужно приезжать в Россию или в Москву для выпуска карты. Мы заключаем
-                            договора дистанционно без личного присутствия.
+                            Как правило, отказа в выдаче карт не бывает. МИД некоторых стран может запросить
+                            дополнительные документы и, очень редко, отказать в распространении действия вашей карты
+                            только на свою страну. В любом случае, карты АТЭС оформляются по договору и при
+                            невозможности оформления карты мы возвращаем вам оплату.
                         </p>
                     </div>
                 </div>
@@ -1564,14 +2146,16 @@ $image = SI_CurrentPageImage();
                             <div class="plus">+</div>
                         </div>
                         <div class="question-text">
-                            Какие документы необходимы для оформления карты АТЭС?
+                            СКОЛЬКО ВРЕМЕНИ ЗАНИМАЕТ ОФОРМЛЕНИЕ КАРТЫ?
                         </div>
 
                     </div>
 
                     <div class="answer">
                         <p>
-                            От вас потребуется только скан заграничного паспорт, справка о деятельность компании на азиатском рынке, а также заявление с просьбой выдачи карты АТЭС.
+                            Обычно оформление карты занимает 3-6 месяцев, поскольку каждый заявитель проходит
+                            согласование в МИД 21 страны участницы соглашения, каждая из которых одобряет кандидатуру
+                            заявителя.
                         </p>
                     </div>
                 </div>
@@ -1583,15 +2167,314 @@ $image = SI_CurrentPageImage();
                             <div class="plus">+</div>
                         </div>
                         <div class="question-text">
-                            Как оплатить выпуск карты?
+                            МОЖНО ЛИ УСКОРИТЬ ВЫДАЧУ КАРТЫ?
                         </div>
 
                     </div>
 
                     <div class="answer">
                         <p>
-                            Вы можете оплатить выпуск карты через наш расчётный счёт через платёжные системы после заключения договора.
+                            Выдачу карты нельзя ускорить. Долгий срок обусловлен тем, что заявку каждого кандидата в
+                            индивидуальном порядке рассматривает МИД каждой из 21 страны, участницы соглашения.
                         </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="btn more-button hidden-xs">
+                Еще вопросы
+            </p>
+
+            <div class="more-block hidden-xs">
+                <div class="questions-block">
+
+                    <!-- ========================= single partners -->
+                    <div class="question-item">
+                        <div class="question border-top">
+                            <div class="question-arrow-holder">
+                                <div class="plus">+</div>
+                            </div>
+                            <div class="question-text">
+                                ВЫПУСКАЮТ ЛИ КАРТЫ АТЭС В ДРУГИХ СТРАНАХ-УЧАСТНИЦАХ ОРГАНИЗАЦИИ «АЗИАТСКО-ТИХООКЕАНСКОЕ
+                                СОТРУДНИЧЕСТВО»?
+                            </div>
+
+                        </div>
+
+                        <div class="answer">
+                            <p>
+                                Да, выпуск карт АТЭС - очень востребованная и распространённая практика. В России на
+                                текущий момент использование карт АТЭС гораздо менее распространено, чем в других
+                                странах.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ========================= single partners -->
+                    <div class="question-item">
+                        <div class="question border-top">
+                            <div class="question-arrow-holder">
+                                <div class="plus">+</div>
+                            </div>
+                            <div class="question-text">
+                                ВОЗМОЖНО ЛИ ПОЛУЧИТЬ КАРТУ, ЕСЛИ Я ЖИВУ НЕ В РОССИИ ИЛИ НЕ В МОСКВЕ?
+                            </div>
+
+                        </div>
+
+                        <div class="answer">
+                            <p>
+                                Да, это возможно. Вам не нужно приезжать в Россию или в Москву для выпуска карты. Мы
+                                заключаем договор дистанционно без вашего личного присутствия и пересылаем документы
+                                курьерской почтой.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ========================= single partners -->
+                    <div class="question-item">
+                        <div class="question border-top">
+                            <div class="question-arrow-holder">
+                                <div class="plus">+</div>
+                            </div>
+                            <div class="question-text">
+                                НУЖНО ЛИ ПЕРЕДАВАТЬ ПАСПОРТ ДЛЯ ОФОРМЛЕНИЯ КАРТЫ?
+                            </div>
+
+                        </div>
+
+                        <div class="answer">
+                            <p>
+                                Нет, нужна только копия загранпаспорта, заполненная анкета, справка с работы и ваше
+                                фото. Никакие другие документы почтой не пересылаются.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ========================= single partners -->
+                    <div class="question-item">
+                        <div class="question border-top">
+                            <div class="question-arrow-holder">
+                                <div class="plus">+</div>
+                            </div>
+                            <div class="question-text">
+                                КАКИМ ОБРАЗОМ ОТПРАВИТЬ ДОКУМЕНТЫ?
+                            </div>
+
+                        </div>
+
+                        <div class="answer">
+                            <p>
+                                Документы необходимо отправлять надёжной курьерской почтой – DHL, UPS, Pony Express.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ========================= single partners -->
+                    <div class="question-item">
+                        <div class="question border-top">
+                            <div class="question-arrow-holder">
+                                <div class="plus">+</div>
+                            </div>
+                            <div class="question-text">
+                                КАКИЕ ДОКУМЕНТЫ НЕОБХОДИМЫ ДЛЯ ОФОРМЛЕНИЯ КАРТЫ АТЭС?
+                            </div>
+
+                        </div>
+
+                        <div class="answer">
+                            <p>
+                                От вас потребуется только скан заграничного паспорт, справка о деятельность компании, в
+                                которой говорится, что ваша работа предполагает поездки в страны Азии, а также заявление
+                                с просьбой выдачи карты АТЭС и цветной фотографией 40*60. Главное требование –
+                                загранпаспорт должен быть действителен не менее 7 лет от момента подачи заявления на
+                                карту. Карта АТЭС прикрепляется к конкретному паспорту, на который она оформляется, и не
+                                действует с другим паспортом. По правилам оформления карт АТЭС, карта может оформляться
+                                до 12 месяцев, действует карта 5 лет и паспорт должен быть действителен не менее 1 года
+                                после окончания действия карты. <br>
+                                Кроме обязательных документов в процессе оформления карты некоторые страны изредка
+                                запрашивают дополнительные документы по своему усмотрению – подтверждение финансовой
+                                стабильности, справки с работы на английском языке, отдельные анкеты и тому подобные
+                                документы.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ========================= single partners -->
+                    <div class="question-item">
+                        <div class="question border-top">
+                            <div class="question-arrow-holder">
+                                <div class="plus">+</div>
+                            </div>
+                            <div class="question-text">
+                                МОГУ ЛИ Я ПОЛУЧИТЬ КАРТУ, ЕСЛИ Я РАБОТАЮ В ЗАРУБЕЖНОЙ КОМПАНИИ?
+                            </div>
+
+                        </div>
+
+                        <div class="answer">
+                            <p>
+                                Вы можете получить карту, если вы работаете в зарубежной компании и можете подтвердить
+                                справкой от компании, что ваша работа предполагает деловые поездки в странах АТЭС.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ========================= single partners -->
+                    <div class="question-item">
+                        <div class="question border-top">
+                            <div class="question-arrow-holder">
+                                <div class="plus">+</div>
+                            </div>
+                            <div class="question-text">
+                                МОГУ ЛИ Я ПОЛУЧИТЬ КАРТУ, ЕСЛИ Я ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ?
+                            </div>
+
+                        </div>
+
+                        <div class="answer">
+                            <p>
+                                Да, Индивидуальные Предприниматели могут получить карту, если вы можете подтвердить
+                                справкой от компании, что ваша работа предполагает деловые поездки в страны АТЭС.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ========================= single partners -->
+                    <div class="question-item">
+                        <div class="question border-top">
+                            <div class="question-arrow-holder">
+                                <div class="plus">+</div>
+                            </div>
+                            <div class="question-text">
+                                КАК ИСПОЛЬЗОВАТЬ КАРТУ АТЭС?
+                            </div>
+
+                        </div>
+
+                        <div class="answer">
+                            <p>
+                                Если у вас есть карта АТЭС, то вам не нужно иметь визу во все страны АТЭС, кроме США и
+                                Канады. Фактически, карта АТЭС действует как многократная бизнес-виза на 5 лет. При
+                                прохождении таможенного контроля необходимо проходить в коридор Diplomats / APEC Card и
+                                предъявлять карту вместе с паспортом, на который она оформлялась. Хотя карта изначально
+                                была создана исключительно для деловых поездок в странах АТЭС, все владельцы карт
+                                практикуют их использование и в туристических поездках. По этой причине, если на таможне
+                                задают вопросы о цели вашей поездки, по избежание недоразумений, лучше отвечать, что
+                                цель поездки – деловая.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ========================= single partners -->
+                    <div class="question-item">
+                        <div class="question border-top">
+                            <div class="question-arrow-holder">
+                                <div class="plus">+</div>
+                            </div>
+                            <div class="question-text">
+                                ПОДХОДИТ ЛИ КАРТА ДЛЯ ПОСТОЯННОГО ПРОЖИВАНИЯ В СТРАНАХ АТЭС?
+                            </div>
+
+                        </div>
+
+                        <div class="answer">
+                            <p>
+                                Во многих странах АТЭС по карте разрешается находиться не более 90 дней в каждый период
+                                из 180 дней, поэтому карта не подходит для постоянного проживание. Требования каждой
+                                конкретной страны необходимо уточнять отдельно.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ========================= single partners -->
+                    <div class="question-item">
+                        <div class="question border-top">
+                            <div class="question-arrow-holder">
+                                <div class="plus">+</div>
+                            </div>
+                            <div class="question-text">
+                                В КАКИХ СТРАНАХ ДЕЙСТВУЕТ МОЯ КАРТА?
+                            </div>
+
+                        </div>
+
+                        <div class="answer">
+                            <p>
+                                Карта действует только для стран, указанных на обороте вашей карты сокращением из трёх
+                                букв. Перечень необходимых стран указывается при подаче заявления на получения карты.
+                                Рекомендуется при подаче заявления указывать все страны АТЭС. Однако, среди всех стран,
+                                наиболее часто запрашивает дополнительные документы и затягивает процедуру оформление
+                                Австралия. Если вы не планируете поездки в Австралию, рекомендуем не указывать её в
+                                списке стран.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ========================= single partners -->
+                    <div class="question-item">
+                        <div class="question border-top">
+                            <div class="question-arrow-holder">
+                                <div class="plus">+</div>
+                            </div>
+                            <div class="question-text">
+                                КАКИЕ СТРАНЫ УКАЗАНЫ У МЕНЯ В КАРТЕ?
+                            </div>
+
+                        </div>
+
+                        <div class="answer">
+                            <p>
+                                Посмотрите обозначения на задней стороне карты. AUS – Австралия, BRN – Бруней, CHL –
+                                Чили, CHN – Китай, HKG – Гонконг, IDN – Индонезия, JPN – Япония, KOR – Южная Корея, MEX
+                                – Мексика, MYS – Малайзия, NZL – Новая Зеландия, PER – Перу, PHL – Филиппины, PNG –
+                                Папуа-Новая Гвинея, RUS – Россия, SGP – Сингапур, THA – Тайланд, TWN – Тайвань, VNM –
+                                Вьетнам.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ========================= single partners -->
+                    <div class="question-item">
+                        <div class="question border-top">
+                            <div class="question-arrow-holder">
+                                <div class="plus">+</div>
+                            </div>
+                            <div class="question-text">
+                                МОГУ ЛИ Я ОФОРМИТЬ КАРТУ НА ЖЕНУ, ДРУЗЕЙ, ДЕТЕЙ?
+                            </div>
+
+                        </div>
+
+                        <div class="answer">
+                            <p>
+                                Карта оформляется на любых совершеннолетних граждан РФ, трудовая деятельность которых
+                                предполагает поездки в страны АТЭС. Если вы можете подтвердить письмом от компании, что
+                                ваши близкие, для которых вы хотите оформить карту, регулярно по работе ездят в страны
+                                АТЭС, то они также могут оформить карту.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ========================= single partners -->
+                    <div class="question-item">
+                        <div class="question border-top">
+                            <div class="question-arrow-holder">
+                                <div class="plus">+</div>
+                            </div>
+                            <div class="question-text">
+                                КАК ОПЛАТИТЬ ВЫПУСК КАРТЫ?
+                            </div>
+
+                        </div>
+
+                        <div class="answer">
+                            <p>
+                                Вы можете оплатить выпуск карты по договору через наш расчётный счёт, а также наличными
+                                и через платёжные системы PayPal и WeChat Pay.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1607,14 +2490,17 @@ $image = SI_CurrentPageImage();
                     </div>
 
                     <div class="question-text">
-                        Выпускают ли карты АТЭС в других <br> странах-участницах  организации<br> «Азиатско-тихоокеанское сотрудничество»?
+                        КАК ОФОРМЛЯЕТСЯ КАРТА?
                     </div>
 
                 </div>
 
                 <div class="answer">
                     <p>
-                        Да, выпуск карт АТЭС - очень востребованная и распространённая практика. Сейчас в России наиболее мягкие требования для получения карты АТЭС.
+                        Карта оформляется через МИД России и остальных стран, входящих в соглашение. Документы на
+                        каждого кандидата направляются во все страны АТЭС, указанные в заявке, рассматриваются в
+                        индивидуальном порядке, и после того, как поступают положительные решения от всех стран, МИД
+                        России выпускает готовую карту. Весь процесс занимает в среднем 3-6 месяцев.
                     </p>
                 </div>
             </div>
@@ -1626,14 +2512,17 @@ $image = SI_CurrentPageImage();
                         <div class="plus">+</div>
                     </div>
                     <div class="question-text">
-                        Возможно ли получить карту, если я живу не в России или не в Москве?
+                        КАКОВЫ ГАРАНТИИ, ЧТО МНЕ ВЫДАДУТ КАРТУ ИЛИ ВЕРНУТ ДЕНЬГИ?
                     </div>
 
                 </div>
+
                 <div class="answer">
                     <p>
-                        Да, это возможно. Вам не нужно приезжать в Россию или в Москву для выпуска карты. Мы заключаем
-                        договора дистанционно без личного присутствия.
+                        Как правило, отказа в выдаче карт не бывает. МИД некоторых стран может запросить дополнительные
+                        документы и, очень редко, отказать в распространении действия вашей карты только на свою страну.
+                        В любом случае, карты АТЭС оформляются по договору и при невозможности оформления карты мы
+                        возвращаем вам оплату.
                     </p>
                 </div>
             </div>
@@ -1645,14 +2534,15 @@ $image = SI_CurrentPageImage();
                         <div class="plus">+</div>
                     </div>
                     <div class="question-text">
-                        Какие документы необходимы для оформления карты АТЭС?
+                        СКОЛЬКО ВРЕМЕНИ ЗАНИМАЕТ ОФОРМЛЕНИЕ КАРТЫ?
                     </div>
 
                 </div>
 
                 <div class="answer">
                     <p>
-                        От вас потребуется только скан заграничного паспорт, справка о деятельность компании на азиатском рынке, а также заявление с просьбой выдачи карты АТЭС.
+                        Обычно оформление карты занимает 3-6 месяцев, поскольку каждый заявитель проходит согласование в
+                        МИД 21 страны участницы соглашения, каждая из которых одобряет кандидатуру заявителя.
                     </p>
                 </div>
             </div>
@@ -1664,20 +2554,316 @@ $image = SI_CurrentPageImage();
                         <div class="plus">+</div>
                     </div>
                     <div class="question-text">
-                        Как оплатить выпуск карты?
+                        МОЖНО ЛИ УСКОРИТЬ ВЫДАЧУ КАРТЫ?
                     </div>
 
                 </div>
 
                 <div class="answer">
                     <p>
-                        Вы можете оплатить выпуск карты через наш расчётный счёт через платёжные системы после заключения договора.
+                        Выдачу карты нельзя ускорить. Долгий срок обусловлен тем, что заявку каждого кандидата в
+                        индивидуальном порядке рассматривает МИД каждой из 21 страны, участницы соглашения.
                     </p>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="btn more-button visible-xs">
+            Еще вопросы
+        </p>
+
+        <div class="more-block">
+            <div class="questions-block visible-xs">
+
+                <!-- ========================= single partners -->
+                <div class="question-item">
+                    <div class="question border-top">
+                        <div class="question-arrow-holder">
+                            <div class="plus">+</div>
+                        </div>
+                        <div class="question-text">
+                            ВЫПУСКАЮТ ЛИ КАРТЫ АТЭС В ДРУГИХ СТРАНАХ-УЧАСТНИЦАХ ОРГАНИЗАЦИИ «АЗИАТСКО-ТИХООКЕАНСКОЕ
+                            СОТРУДНИЧЕСТВО»?
+                        </div>
+
+                    </div>
+
+                    <div class="answer">
+                        <p>
+                            Да, выпуск карт АТЭС - очень востребованная и распространённая практика. В России на текущий
+                            момент использование карт АТЭС гораздо менее распространено, чем в других странах.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ========================= single partners -->
+                <div class="question-item">
+                    <div class="question border-top">
+                        <div class="question-arrow-holder">
+                            <div class="plus">+</div>
+                        </div>
+                        <div class="question-text">
+                            ВОЗМОЖНО ЛИ ПОЛУЧИТЬ КАРТУ, ЕСЛИ Я ЖИВУ НЕ В РОССИИ ИЛИ НЕ В МОСКВЕ?
+                        </div>
+
+                    </div>
+
+                    <div class="answer">
+                        <p>
+                            Да, это возможно. Вам не нужно приезжать в Россию или в Москву для выпуска карты. Мы
+                            заключаем договор дистанционно без вашего личного присутствия и пересылаем документы
+                            курьерской почтой.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ========================= single partners -->
+                <div class="question-item">
+                    <div class="question border-top">
+                        <div class="question-arrow-holder">
+                            <div class="plus">+</div>
+                        </div>
+                        <div class="question-text">
+                            НУЖНО ЛИ ПЕРЕДАВАТЬ ПАСПОРТ ДЛЯ ОФОРМЛЕНИЯ КАРТЫ?
+                        </div>
+
+                    </div>
+
+                    <div class="answer">
+                        <p>
+                            Нет, нужна только копия загранпаспорта, заполненная анкета, справка с работы и ваше фото.
+                            Никакие другие документы почтой не пересылаются.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ========================= single partners -->
+                <div class="question-item">
+                    <div class="question border-top">
+                        <div class="question-arrow-holder">
+                            <div class="plus">+</div>
+                        </div>
+                        <div class="question-text">
+                            КАКИМ ОБРАЗОМ ОТПРАВИТЬ ДОКУМЕНТЫ?
+                        </div>
+
+                    </div>
+
+                    <div class="answer">
+                        <p>
+                            Документы необходимо отправлять надёжной курьерской почтой – DHL, UPS, Pony Express.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ========================= single partners -->
+                <div class="question-item">
+                    <div class="question border-top">
+                        <div class="question-arrow-holder">
+                            <div class="plus">+</div>
+                        </div>
+                        <div class="question-text">
+                            КАКИЕ ДОКУМЕНТЫ НЕОБХОДИМЫ ДЛЯ ОФОРМЛЕНИЯ КАРТЫ АТЭС?
+                        </div>
+
+                    </div>
+
+                    <div class="answer">
+                        <p>
+                            От вас потребуется только скан заграничного паспорт, справка о деятельность компании, в
+                            которой говорится, что ваша работа предполагает поездки в страны Азии, а также заявление
+                            с просьбой выдачи карты АТЭС и цветной фотографией 40*60. Главное требование –
+                            загранпаспорт должен быть действителен не менее 7 лет от момента подачи заявления на
+                            карту. Карта АТЭС прикрепляется к конкретному паспорту, на который она оформляется, и не
+                            действует с другим паспортом. По правилам оформления карт АТЭС, карта может оформляться
+                            до 12 месяцев, действует карта 5 лет и паспорт должен быть действителен не менее 1 года
+                            после окончания действия карты. <br>
+                            Кроме обязательных документов в процессе оформления карты некоторые страны изредка
+                            запрашивают дополнительные документы по своему усмотрению – подтверждение финансовой
+                            стабильности, справки с работы на английском языке, отдельные анкеты и тому подобные
+                            документы.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ========================= single partners -->
+                <div class="question-item">
+                    <div class="question border-top">
+                        <div class="question-arrow-holder">
+                            <div class="plus">+</div>
+                        </div>
+                        <div class="question-text">
+                            МОГУ ЛИ Я ПОЛУЧИТЬ КАРТУ, ЕСЛИ Я РАБОТАЮ В ЗАРУБЕЖНОЙ КОМПАНИИ?
+                        </div>
+
+                    </div>
+
+                    <div class="answer">
+                        <p>
+                            Вы можете получить карту, если вы работаете в зарубежной компании и можете подтвердить
+                            справкой от компании, что ваша работа предполагает деловые поездки в странах АТЭС.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ========================= single partners -->
+                <div class="question-item">
+                    <div class="question border-top">
+                        <div class="question-arrow-holder">
+                            <div class="plus">+</div>
+                        </div>
+                        <div class="question-text">
+                            МОГУ ЛИ Я ПОЛУЧИТЬ КАРТУ, ЕСЛИ Я ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ?
+                        </div>
+
+                    </div>
+
+                    <div class="answer">
+                        <p>
+                            Да, Индивидуальные Предприниматели могут получить карту, если вы можете подтвердить справкой
+                            от компании, что ваша работа предполагает деловые поездки в страны АТЭС.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ========================= single partners -->
+                <div class="question-item">
+                    <div class="question border-top">
+                        <div class="question-arrow-holder">
+                            <div class="plus">+</div>
+                        </div>
+                        <div class="question-text">
+                            КАК ИСПОЛЬЗОВАТЬ КАРТУ АТЭС?
+                        </div>
+
+                    </div>
+
+                    <div class="answer">
+                        <p>
+                            Если у вас есть карта АТЭС, то вам не нужно иметь визу во все страны АТЭС, кроме США и
+                            Канады. Фактически, карта АТЭС действует как многократная бизнес-виза на 5 лет. При
+                            прохождении таможенного контроля необходимо проходить в коридор Diplomats / APEC Card и
+                            предъявлять карту вместе с паспортом, на который она оформлялась. Хотя карта изначально была
+                            создана исключительно для деловых поездок в странах АТЭС, все владельцы карт практикуют их
+                            использование и в туристических поездках. По этой причине, если на таможне задают вопросы о
+                            цели вашей поездки, по избежание недоразумений, лучше отвечать, что цель поездки – деловая.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ========================= single partners -->
+                <div class="question-item">
+                    <div class="question border-top">
+                        <div class="question-arrow-holder">
+                            <div class="plus">+</div>
+                        </div>
+                        <div class="question-text">
+                            ПОДХОДИТ ЛИ КАРТА ДЛЯ ПОСТОЯННОГО ПРОЖИВАНИЯ В СТРАНАХ АТЭС?
+                        </div>
+
+                    </div>
+
+                    <div class="answer">
+                        <p>
+                            Во многих странах АТЭС по карте разрешается находиться не более 90 дней в каждый период из
+                            180 дней, поэтому карта не подходит для постоянного проживание. Требования каждой конкретной
+                            страны необходимо уточнять отдельно.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ========================= single partners -->
+                <div class="question-item">
+                    <div class="question border-top">
+                        <div class="question-arrow-holder">
+                            <div class="plus">+</div>
+                        </div>
+                        <div class="question-text">
+                            В КАКИХ СТРАНАХ ДЕЙСТВУЕТ МОЯ КАРТА?
+                        </div>
+
+                    </div>
+
+                    <div class="answer">
+                        <p>
+                            Карта действует только для стран, указанных на обороте вашей карты сокращением из трёх букв.
+                            Перечень необходимых стран указывается при подаче заявления на получения карты.
+                            Рекомендуется при подаче заявления указывать все страны АТЭС. Однако, среди всех стран,
+                            наиболее часто запрашивает дополнительные документы и затягивает процедуру оформление
+                            Австралия. Если вы не планируете поездки в Австралию, рекомендуем не указывать её в списке
+                            стран.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ========================= single partners -->
+                <div class="question-item">
+                    <div class="question border-top">
+                        <div class="question-arrow-holder">
+                            <div class="plus">+</div>
+                        </div>
+                        <div class="question-text">
+                            КАКИЕ СТРАНЫ УКАЗАНЫ У МЕНЯ В КАРТЕ?
+                        </div>
+
+                    </div>
+
+                    <div class="answer">
+                        <p>
+                            Посмотрите обозначения на задней стороне карты. AUS – Австралия, BRN – Бруней, CHL – Чили,
+                            CHN – Китай, HKG – Гонконг, IDN – Индонезия, JPN – Япония, KOR – Южная Корея, MEX – Мексика,
+                            MYS – Малайзия, NZL – Новая Зеландия, PER – Перу, PHL – Филиппины, PNG – Папуа-Новая Гвинея,
+                            RUS – Россия, SGP – Сингапур, THA – Тайланд, TWN – Тайвань, VNM – Вьетнам.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ========================= single partners -->
+                <div class="question-item">
+                    <div class="question border-top">
+                        <div class="question-arrow-holder">
+                            <div class="plus">+</div>
+                        </div>
+                        <div class="question-text">
+                            МОГУ ЛИ Я ОФОРМИТЬ КАРТУ НА ЖЕНУ, ДРУЗЕЙ, ДЕТЕЙ?
+                        </div>
+
+                    </div>
+
+                    <div class="answer">
+                        <p>
+                            Карта оформляется на любых совершеннолетних граждан РФ, трудовая деятельность которых
+                            предполагает поездки в страны АТЭС. Если вы можете подтвердить письмом от компании, что ваши
+                            близкие, для которых вы хотите оформить карту, регулярно по работе ездят в страны АТЭС, то
+                            они также могут оформить карту.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ========================= single partners -->
+                <div class="question-item">
+                    <div class="question border-top">
+                        <div class="question-arrow-holder">
+                            <div class="plus">+</div>
+                        </div>
+                        <div class="question-text">
+                            КАК ОПЛАТИТЬ ВЫПУСК КАРТЫ?
+                        </div>
+
+                    </div>
+
+                    <div class="answer">
+                        <p>
+                            Вы можете оплатить выпуск карты по договору через наш расчётный счёт, а также наличными и
+                            через платёжные системы PayPal и WeChat Pay.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
+    </section>
 
     <!--===================================================== section form-begin -->
     <section class="section-form form-begin" id="form-begin">
@@ -1686,11 +2872,7 @@ $image = SI_CurrentPageImage();
             <img src="images/form-bg.png" alt=" " class="man cre-animate" data-animation="slide-in-from-right"
                  data-speed="1000" data-delay="600" data-offset="90%" data-easing="easeOut">
 
-            <h2 class="hidden-xs">
-                Начните оформлять карту<Br> АТЭС прямо сейчас
-            </h2>
-
-            <h2 class="visible-xs">
+            <h2>
                 Начните оформлять карту АТЭС прямо сейчас
             </h2>
 
@@ -1712,7 +2894,9 @@ $image = SI_CurrentPageImage();
                 <?php //Поле выше для защиты формы от спам-ботов ?>
 
                 <div class="btn-holder">
-                    <button type="submit" class="btn button-yellow">Заказать консультацию <span>Я согласен на обработку персональных данных</span></button>
+                    <button type="submit" class="btn button-yellow" onclick="yaCounter55513930.reachGoal('target6');" data-extra="5">Заказать консультацию <span>Я согласен на
+                            обработку персональных данных</span>
+                    </button>
                     <!--<div class="g-recaptcha" id="g-recaptcha"></div>-->
                 </div>
 
@@ -1742,7 +2926,9 @@ $image = SI_CurrentPageImage();
                         </div>
                     </div>
                     <a href="tel:+79450000000" class="phone-link dark">8 945 000-00-00</a>
-                    <a href="#" class="open-consult-modal consult" data-extra="1">Заказать консультацию</a>
+                    <a href="#" class="open-consult-modal consult" data-extra="1" onclick="yaCounter55513930
+                    .reachGoal('target7');
+">Заказать консультацию</a>
                 </div>
             </div>
 
@@ -1751,19 +2937,21 @@ $image = SI_CurrentPageImage();
             <div class="row">
                 <div class="col-1-2 col-xs-1">
                     <span>
-                        ООО «Всепогода» <br>
-                        Адрес офиса: Москва, Столешников переулок 7, стр. 3<br>
-                        ОГРН: 1234567890123
+                        ООО «Фэнси Армор Рус» <br>
+                        Адрес офиса: 107031, Москва, Столешников переулок 7, стр. 3, 3 этаж<br>
+                        ОГРН: 1132543001909
                     </span>
                     <span class="visible-xs">
-                        Разработано в <a href="http://hello-brand.ru/" class="yellow" target="_blank" rel="nofollow noopener">"Hello, brand!"</a>
+                        Разработано в <a href="http://hello-brand.ru/" class="yellow" target="_blank"
+                                         rel="nofollow noopener">"Hello, brand!"</a>
                     </span>
                 </div>
 
                 <!-- copyright block -->
                 <div class="col-1-2 hidden-xs align-right">
                    <span>
-                        Разработано в <a href="http://hello-brand.ru/" class="yellow" target="_blank" rel="nofollow noopener">"Hello, brand!"</a>
+                        Разработано в <a href="http://hello-brand.ru/" class="yellow" target="_blank"
+                                         rel="nofollow noopener">"Hello, brand!"</a>
                     </span>
                 </div>
             </div>
@@ -1780,8 +2968,8 @@ $image = SI_CurrentPageImage();
         <div class="pseudo-table">
             <div class="pseudo-table-cell nav-overlay">
                 <ul class="nav" id="global-menu">
-                    <li><a class="si-jump global-nav-link"  href="#what">Что такое карты АТЭС?</a></li>
-                    <li><a class="si-jump global-nav-link" href="#diploma"> Где можно использовать?</a></li>
+                    <li><a class="si-jump global-nav-link" href="#what">Что такое карты АТЭС?</a></li>
+                    <li><a class="si-jump global-nav-link" href="#world"> Где можно использовать?</a></li>
                     <li><a class="si-jump global-nav-link" href="#get"> Получить карту АТЭС</a></li>
                 </ul>
             </div>
@@ -1837,7 +3025,7 @@ $image = SI_CurrentPageImage();
 
                         <ul class="nav nav-tabs scrollbar-inner">
                             <li class="tab-link active" data-tab="t-price-1" data-tab-block="t-price">
-                                 <span>1</span> Россия
+                                <span>1</span> Россия
                             </li>
 
                             <li class="tab-link" data-tab="t-price-2" data-tab-block="t-price">
@@ -1929,107 +3117,127 @@ $image = SI_CurrentPageImage();
 
                             <!-- ================================================ price tab 1-->
                             <div class="tab-content active" data-tab="t-price-1" data-tab-block="t-price">
-                                Паспортный контроль без очереди по дипломатическому коридору. Требуется виза.
+                                Паспортный контроль без очереди по дипломатическому коридору.
                             </div>
 
                             <!-- ================================================ price tab 2-->
                             <div class="tab-content" data-tab="t-price-2" data-tab-block="t-price">
-                                Паспортный контроль без очереди по дипломатическому коридору. Требуется виза.
+                                Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по дипломатическому
+                                коридору с пометкой APEC Card.
                             </div>
 
                             <!-- ================================================ price tab 3-->
                             <div class="tab-content" data-tab="t-price-3" data-tab-block="t-price">
-                                Паспортный контроль без очереди по дипломатическому коридору. Требуется виза.
+                                Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по дипломатическому
+                                коридору с пометкой APEC Card.
                             </div>
 
                             <!-- ================================================ price tab 4-->
                             <div class="tab-content" data-tab="t-price-4" data-tab-block="t-price">
-                                Паспортный контроль без очереди по дипломатическому коридору. Требуется виза.
+                                Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по дипломатическому
+                                коридору с пометкой APEC Card.
                             </div>
 
                             <!-- ================================================ price tab 5-->
                             <div class="tab-content" data-tab="t-price-5" data-tab-block="t-price">
-                                Паспортный контроль без очереди по дипломатическому коридору. Требуется виза.
+                                Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по дипломатическому
+                                коридору с пометкой APEC Card.
                             </div>
 
                             <!-- ================================================ price tab 6-->
                             <div class="tab-content" data-tab="t-price-6" data-tab-block="t-price">
-                                Паспортный контроль без очереди по дипломатическому коридору. Требуется виза.
+                                Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по дипломатическому
+                                коридору с пометкой APEC Card.
                             </div>
 
                             <!-- ================================================ price tab 7-->
                             <div class="tab-content" data-tab="t-price-7" data-tab-block="t-price">
-                                Паспортный контроль без очереди по дипломатическому коридору. Требуется виза.
+                                Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по дипломатическому
+                                коридору с пометкой APEC Card.
                             </div>
 
                             <!-- ================================================ price tab 8-->
                             <div class="tab-content" data-tab="t-price-8" data-tab-block="t-price">
-                                Паспортный контроль без очереди по дипломатическому коридору. Требуется виза.
+                                Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по дипломатическому
+                                коридору с пометкой APEC Card.
                             </div>
 
                             <!-- ================================================ price tab 9-->
                             <div class="tab-content" data-tab="t-price-9" data-tab-block="t-price">
-                                Паспортный контроль без очереди по дипломатическому коридору. Требуется виза.
+                                Без визы. Коридор въезда 59 дней. Паспортный контроль без очереди по дипломатическому
+                                коридору с пометкой APEC Card.
                             </div>
 
                             <!-- ================================================ price tab 10-->
                             <div class="tab-content" data-tab="t-price-10" data-tab-block="t-price">
-                                Паспортный контроль без очереди по дипломатическому коридору. Требуется виза.
+                                Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по дипломатическому
+                                коридору с пометкой APEC Card.
                             </div>
 
                             <!-- ================================================ price tab 11-->
                             <div class="tab-content" data-tab="t-price-11" data-tab-block="t-price">
-                                Паспортный контроль без очереди по дипломатическому коридору. Требуется виза.
+                                Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по дипломатическому
+                                коридору с пометкой APEC Card.
                             </div>
 
                             <!-- ================================================ price tab 12-->
                             <div class="tab-content" data-tab="t-price-12" data-tab-block="t-price">
-                                Паспортный контроль без очереди по дипломатическому коридору. Требуется виза.
+                                Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по дипломатическому
+                                коридору с пометкой APEC Card.
                             </div>
 
                             <!-- ================================================ price tab 13-->
                             <div class="tab-content" data-tab="t-price-13" data-tab-block="t-price">
-                                Паспортный контроль без очереди по дипломатическому коридору. Требуется виза.
+                                Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по дипломатическому
+                                коридору с пометкой APEC Card.
                             </div>
 
                             <!-- ================================================ price tab 14-->
                             <div class="tab-content" data-tab="t-price-14" data-tab-block="t-price">
-                                Паспортный контроль без очереди по дипломатическому коридору. Требуется виза.
+                                Без визы. Коридор въезда 60 дней. Паспортный контроль без очереди по дипломатическому
+                                коридору с пометкой APEC Card.
                             </div>
 
                             <!-- ================================================ price tab 15-->
                             <div class="tab-content" data-tab="t-price-15" data-tab-block="t-price">
-                                Паспортный контроль без очереди по дипломатическому коридору. Требуется виза.
+                                Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по дипломатическому
+                                коридору с пометкой APEC Card.
                             </div>
 
                             <!-- ================================================ price tab 16-->
                             <div class="tab-content" data-tab="t-price-16" data-tab-block="t-price">
-                                Паспортный контроль без очереди по дипломатическому коридору. Требуется виза.
+                                Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по дипломатическому
+                                коридору с пометкой APEC Card.
                             </div>
 
                             <!-- ================================================ price tab 17-->
                             <div class="tab-content" data-tab="t-price-17" data-tab-block="t-price">
-                                Паспортный контроль без очереди по дипломатическому коридору. Требуется виза.
+                                Требуется виза. Паспортный контроль без очереди по дипломатическому коридору с пометкой
+                                APEC Card.
                             </div>
 
                             <!-- ================================================ price tab 18-->
                             <div class="tab-content" data-tab="t-price-18" data-tab-block="t-price">
-                                Паспортный контроль без очереди по дипломатическому коридору. Требуется виза.
+                                Требуется виза. Для владельцев карт возможна ускоренная запись на визовое собеседование.
+                                Паспортный контроль без очереди по дипломатическому коридору с пометкой APEC Card.
                             </div>
 
                             <!-- ================================================ price tab 19-->
                             <div class="tab-content" data-tab="t-price-19" data-tab-block="t-price">
-                                Паспортный контроль без очереди по дипломатическому коридору. Требуется виза.
+                                Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по дипломатическому
+                                коридору с пометкой APEC Card.
                             </div>
 
                             <!-- ================================================ price tab 20-->
                             <div class="tab-content" data-tab="t-price-20" data-tab-block="t-price">
-                                Паспортный контроль без очереди по дипломатическому коридору. Требуется виза.
+                                Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по дипломатическому
+                                коридору с пометкой APEC Card.
                             </div>
 
                             <!-- ================================================ price tab 21-->
                             <div class="tab-content" data-tab="t-price-21" data-tab-block="t-price">
-                                Паспортный контроль без очереди по дипломатическому коридору. Требуется виза.
+                                Без визы. Коридор въезда 90 дней. Паспортный контроль без очереди по дипломатическому
+                                коридору с пометкой APEC Card.
                             </div>
 
                         </div>
@@ -2037,8 +3245,8 @@ $image = SI_CurrentPageImage();
                 </div>
             </div>
         </div>
-	
-        <!--============================================== phone modal -->
+
+        <!--============================================== consult modal -->
         <div class="si-modal consult-modal">
             <a href="#" class="si-close"></a>
 
@@ -2067,8 +3275,8 @@ $image = SI_CurrentPageImage();
 
                     <input type="hidden" name="send_type" class="send-type" value="2">
                     <input type="hidden" name="send_extra" class="send-extra" value="1">
-					<input type="hidden" name="key" value="<?php echo $_SESSION['sf_key'] ?>">
-					<?php //Поле выше для защиты формы от спам-ботов ?>
+                    <input type="hidden" name="key" value="<?php echo $_SESSION['sf_key'] ?>">
+                    <?php //Поле выше для защиты формы от спам-ботов ?>
 
                     <div class="btn-holder">
                         <button type="submit" class="btn button-yellow">Заказать консультацию <span>Я согласен на
@@ -2210,9 +3418,7 @@ $image = SI_CurrentPageImage();
 
 <!-- custom scripts -->
 <script src="js/main.js"></script>
-<script src="js/share.js"></script>
-
-<?php include('si-engine.php'); ?>
+<script src="js/scrollbar.js"></script>
 
 <!--
 
@@ -2221,7 +3427,5 @@ Digital-agency "Hello, brand!" - http://hello-brand.ru/
 Версия: 1.0
 
 -->
-
-
 </body>
 </html>
